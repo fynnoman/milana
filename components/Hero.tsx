@@ -93,8 +93,21 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.5, ease: [0.23, 1, 0.32, 1] }}
-            className="eyebrow flex items-center gap-4"
+            transition={{ duration: 0.9, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
+            className="relative w-full max-w-[420px] sm:max-w-[520px]"
+          >
+            <img
+              src="/wordmark.png"
+              alt="MB Zahnabrechnung"
+              className="h-auto w-full select-none"
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.55, ease: [0.23, 1, 0.32, 1] }}
+            className="eyebrow flex items-center gap-4 mt-8"
           >
             <span className="h-px w-10 bg-petrol/70" />
             Zahnärztliche Abrechnung · Saarlouis

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
 
@@ -36,8 +37,15 @@ export default function Nav() {
         >
           <div className="flex items-center justify-between">
             <Link href="#top" className="flex items-center gap-3 group">
-              <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full ring-1 ring-line grid place-items-center bg-navy text-white">
-                <span className="font-display text-[15px] leading-none">MK</span>
+              <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full ring-1 ring-line bg-white">
+                <Image
+                  src="/logo.png"
+                  alt="Milana Kollmann · Zahnärztliche Abrechnung"
+                  fill
+                  sizes="40px"
+                  className="object-cover"
+                  priority
+                />
               </div>
               <div className="hidden sm:flex flex-col leading-none">
                 <span className="font-display text-lg text-navy tracking-tight">

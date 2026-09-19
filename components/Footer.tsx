@@ -8,18 +8,12 @@ export default function Footer() {
       <div className="mx-auto max-w-[1500px] px-6 sm:px-10 pt-20 pb-10">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="flex items-center gap-3">
-              <div className="relative h-10 w-10 overflow-hidden rounded-full ring-1 ring-line grid place-items-center bg-navy text-white">
-                <span className="font-display text-[16px] leading-none">MK</span>
-              </div>
-              <div>
-                <div className="font-display text-lg leading-none">Milana Kollmann</div>
-                <div className="mt-1 text-[10px] uppercase tracking-[0.18em] text-navy/60">
-                  Zahnärztliche Abrechnung
-                </div>
-              </div>
-            </div>
-            <p className="mt-5 text-[13px] leading-[1.75] text-navy/70 max-w-[260px]">
+            <img
+              src="/wordmark.png"
+              alt="MB Zahnabrechnung"
+              className="h-auto w-[240px] max-w-full select-none"
+            />
+            <p className="mt-6 text-[13px] leading-[1.75] text-navy/70 max-w-[260px]">
               Persönliche Unterstützung für Zahnarztpraxen aus Saarlouis.
               Persönlich, präzise, zuverlässig.
             </p>
