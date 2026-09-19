@@ -24,7 +24,6 @@ export default function Hero() {
   const photoY = useTransform(scrollYProgress, [0, 1], ["0%", shouldReduce ? "0%" : "12%"]);
   const photoScale = useTransform(scrollYProgress, [0, 1], [1.02, shouldReduce ? 1.02 : 1.12]);
   const contentY = useTransform(scrollYProgress, [0, 1], ["0%", shouldReduce ? "0%" : "-14%"]);
-  const monogramX = useTransform(scrollYProgress, [0, 1], ["0%", shouldReduce ? "0%" : "-14%"]);
 
   return (
     <section
@@ -56,79 +55,46 @@ export default function Hero() {
       <div className="pointer-events-none absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full bg-mist blur-3xl" />
       <div className="pointer-events-none absolute -bottom-40 left-1/2 h-[520px] w-[520px] rounded-full bg-petrol/10 blur-3xl" />
 
-      {/* Wasserzeichen MK */}
+      {/* RUNDES LOGO oben rechts in der Ecke */}
       <motion.div
-        aria-hidden
-        style={{ x: monogramX }}
-        className="pointer-events-none absolute -top-[4vh] -left-[3vw] select-none font-display italic text-[26vw] leading-[0.82] tracking-tight text-navy/[0.045] lg:text-[19vw]"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
+        className="hidden sm:block absolute top-24 right-6 sm:top-28 sm:right-10 z-20 w-[130px] sm:w-[160px] aspect-square overflow-hidden rounded-full ring-1 ring-line bg-white shadow-card"
       >
-        MK
+        <img
+          src="/logo.png"
+          alt="Milana Kollmann · Zahnärztliche Abrechnung"
+          className="h-full w-full object-cover select-none"
+        />
       </motion.div>
 
-      {/* Hauptinhalt */}
+      {/* CONTENT-BLOCK: Chip + Eyebrow + Heading + Copy + Buttons + Pillars (alles links) */}
       <motion.div
         style={{ y: contentY }}
-        className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1500px] flex-col px-6 sm:px-10 pt-24 pb-16"
+        className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1500px] flex-col px-6 sm:px-10 pt-28 pb-16"
       >
-        {/* Chip oben */}
-        <div className="flex flex-wrap items-start gap-4">
-          <motion.div
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.35, ease: [0.23, 1, 0.32, 1] }}
-            className="glass flex items-center gap-3 rounded-full px-4 py-2"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-petrol/70" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-petrol" />
-            </span>
-            <span className="text-[11px] uppercase tracking-[0.18em] text-navy/85">
-              Herzlich willkommen
-            </span>
-          </motion.div>
-        </div>
-
-        {/* Titel */}
-        <div className="flex-1 flex flex-col justify-start pt-6 pb-10 max-w-[92%] lg:max-w-[78%]">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
-            className="relative w-full max-w-[420px] sm:max-w-[520px]"
-          >
-            <img
-              src="/wordmark.png"
-              alt="MB Zahnabrechnung"
-              className="h-auto w-full select-none"
-            />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.55, ease: [0.23, 1, 0.32, 1] }}
-            className="eyebrow flex items-center gap-4 mt-8"
-          >
-            <span className="h-px w-10 bg-petrol/70" />
-            Zahnärztliche Abrechnung · Saarlouis
-          </motion.div>
-
-          <h1 className="font-display mt-8 leading-[0.86] tracking-[-0.025em] text-navy">
+        <div className="flex flex-col max-w-[92%] lg:max-w-[78%]">
+          <h1 className="font-display leading-[1.25] tracking-[-0.025em] text-navy">
             <span className="block overflow-hidden pb-[0.05em]">
-              <SplitText text="Ihre" className="block text-[clamp(64px,13vw,220px)]" delay={0.15} />
+              <SplitText text="Ihre" className="block text-[clamp(52px,10vw,170px)]" delay={0.15} eager />
             </span>
-            <span className="block overflow-hidden pb-[0.05em] mt-[-0.02em]">
-              <SplitText text="Abrechnung." className="block text-[clamp(64px,13vw,220px)]" delay={0.35} />
+            <span className="block overflow-hidden pb-[0.28em]">
+              <SplitText text="Abrechnung." className="block text-[clamp(52px,10vw,170px)]" delay={0.35} eager />
             </span>
-            <span className="block overflow-hidden pb-[0.05em] mt-[-0.02em]">
+          </h1>
+
+          <div className="font-display leading-[0.86] tracking-[-0.025em] mt-6">
+            <span className="block overflow-hidden pb-[0.15em]">
               <SplitText
                 text="Persönlich betreut."
                 italic
-                className="block text-[clamp(50px,10vw,170px)] italic text-petrol pl-[0.5em]"
+                className="block text-[clamp(40px,8vw,130px)] italic text-petrol pl-[0.5em]"
                 delay={0.7}
+                eager
               />
             </span>
-          </h1>
+          </div>
 
           {/* Signatur */}
           <motion.div
