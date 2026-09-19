@@ -118,9 +118,9 @@ export default function Contact() {
 
 function ContactRow({ label, value, href }: { label: string; value: string; href?: string }) {
   const inner = (
-    <div className="grid grid-cols-[140px_1fr] items-baseline gap-6 border-b border-white/15 pb-6">
+    <div className="grid grid-cols-1 gap-2 border-b border-white/15 pb-6 sm:grid-cols-[140px_1fr] sm:items-baseline sm:gap-6">
       <div className="eyebrow !text-white/70">{label}</div>
-      <div className="font-display text-[22px] leading-tight text-white">
+      <div className="font-display text-[20px] leading-tight text-white sm:text-[22px]">
         {value}
       </div>
     </div>

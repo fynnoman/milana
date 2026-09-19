@@ -39,7 +39,7 @@ export default function Nav() {
               <img
                 src="/wordmark.png"
                 alt="MB Zahnabrechnung"
-                className="h-8 sm:h-9 w-auto select-none"
+                className="h-11 sm:h-12 w-auto select-none"
               />
             </Link>
 

@@ -168,7 +168,7 @@ export default function Hero() {
           className="relative"
         >
           <div className="soft-line max-w-full" />
-          <div className="mt-6 grid grid-cols-3 gap-x-8">
+          <div className="mt-6 grid grid-cols-1 gap-y-4 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-0">
             {[
               { k: "Persönlich", label: "Feste Ansprechpartnerin" },
               { k: "Präzise", label: "Blick fürs Detail" },

@@ -95,7 +95,47 @@ export default function HorizontalServices() {
   const progressBar = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section id="leistungen" ref={outerRef} className="relative h-[520vh] bg-white">
+    <>
+      {/* MOBILE: Cards vertikal gestapelt */}
+      <section id="leistungen" className="relative bg-white py-24 md:hidden">
+        <div className="mx-auto max-w-[1500px] px-6">
+          <div className="eyebrow flex items-center gap-3">
+            <span className="h-px w-8 bg-petrol/60" />
+            Leistungen
+          </div>
+          <h2 className="font-display mt-4 text-[clamp(28px,7vw,44px)] leading-[1.02] text-navy max-w-2xl">
+            Sechs Bausteine.
+            <span className="italic text-petrol"> Ein Ergebnis.</span>
+          </h2>
+
+          <div className="mt-12 flex flex-col gap-6">
+            {services.map((s, i) => (
+              <ServiceCard key={s.n} {...s} index={i} mobile />
+            ))}
+          </div>
+
+          <div className="mt-10 flex items-baseline justify-between gap-4 border-t border-line pt-4">
+            <div className="flex items-baseline gap-3">
+              <span className="font-display text-[36px] leading-none text-navy">
+                {services.length.toString().padStart(2, "0")}
+              </span>
+              <span className="text-[10px] uppercase tracking-[0.22em] text-navy/55">
+                Leistungen
+              </span>
+            </div>
+            <div className="flex items-center gap-3 divider-num text-[10px]">
+              <span>Persönlich</span>
+              <span>·</span>
+              <span>Präzise</span>
+              <span>·</span>
+              <span>Zuverlässig</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DESKTOP: Horizontales Scroll-Rail */}
+      <section ref={outerRef} className="relative hidden h-[520vh] bg-white md:block">
       <div className="sticky top-0 flex h-screen w-full flex-col overflow-hidden">
         <div className="relative z-10 shrink-0 border-b border-line bg-white/80 backdrop-blur-md">
           <div className="mx-auto flex max-w-[1500px] flex-wrap items-end justify-between gap-4 px-6 sm:px-10 pt-24 pb-6">
@@ -160,7 +200,8 @@ export default function HorizontalServices() {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </>
   );
 }
 
@@ -172,13 +213,16 @@ function ServiceCard({
   points,
   accent,
   index,
-}: (typeof services)[number] & { index: number }) {
+  mobile = false,
+}: (typeof services)[number] & { index: number; mobile?: boolean }) {
   const isDeep = index % 2 === 1;
   return (
     <article
-      className={`relative flex h-full max-h-[640px] w-[85vw] max-w-[680px] shrink-0 flex-col justify-between overflow-hidden rounded-lg p-8 sm:p-12 ${
-        isDeep ? "bg-navy text-white" : "glass text-navy"
-      }`}
+      className={`relative flex overflow-hidden rounded-lg p-7 sm:p-12 ${
+        mobile
+          ? "w-full flex-col gap-6"
+          : "h-full max-h-[640px] w-[85vw] max-w-[680px] shrink-0 flex-col justify-between"
+      } ${isDeep ? "bg-navy text-white" : "glass text-navy"}`}
     >
       <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-petrol/25 blur-3xl" />
 
@@ -193,7 +237,15 @@ function ServiceCard({
             isDeep ? "text-white" : "text-navy"
           }`}
         >
-          {title}
+          {title.split(/(-)/).map((part, i) =>
+            part === "-" ? (
+              <span key={i} className="font-sans font-light">
+                -
+              </span>
+            ) : (
+              <span key={i}>{part}</span>
+            )
+          )}
         </h3>
         <div
           className={`eyebrow mt-5 !text-[10px] ${
