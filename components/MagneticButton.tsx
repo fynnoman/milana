@@ -48,11 +48,11 @@ export default function MagneticButton({
 
   const classes = {
     primary:
-      "inline-flex items-center gap-3 px-8 py-4 bg-navy text-ivory rounded-sm uppercase tracking-[0.14em] text-[12px] font-medium hover:bg-ink transition-colors",
+      "inline-flex items-center gap-3 px-8 py-4 bg-navy text-white rounded-sm uppercase tracking-[0.14em] text-[12px] font-medium hover:bg-deep transition-colors",
     ghost:
       "inline-flex items-center gap-2 uppercase tracking-[0.14em] text-[12px] font-medium text-navy hover:text-petrol transition-colors",
     outline:
-      "inline-flex items-center gap-3 px-8 py-4 border border-navy/40 text-navy rounded-sm uppercase tracking-[0.14em] text-[12px] font-medium hover:bg-navy hover:text-ivory transition-colors",
+      "inline-flex items-center gap-3 px-8 py-4 border border-navy/40 text-navy rounded-sm uppercase tracking-[0.14em] text-[12px] font-medium hover:bg-navy hover:text-white transition-colors",
   }[variant];
 
   const content = (

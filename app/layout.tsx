@@ -17,14 +17,13 @@ const sans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MB Zahnärztliche Abrechnung — Präzise Privatabrechnung für Ihre Praxis",
+  title: "Milana Kollmann · Zahnärztliche Abrechnung",
   description:
-    "Externe Abrechnungsexpertin für Zahnarztpraxen. GOZ, GOÄ, BEMA, HKP, Reklamationsmanagement. Präzise, effizient, persönlich.",
-  metadataBase: new URL("https://mb-abrechnung.de"),
+    "Persönliche Unterstützung für die zahnärztliche Abrechnung. Privatabrechnung, KZV, HKP und Reklamationsmanagement. Aus Saarlouis, mit Ruhe und Sorgfalt.",
   openGraph: {
-    title: "MB Zahnärztliche Abrechnung",
+    title: "Milana Kollmann · Zahnärztliche Abrechnung",
     description:
-      "Präzise Privatabrechnung für Zahnarztpraxen. GOZ, BEMA, HKP, Reklamationsmanagement.",
+      "Persönliche Unterstützung für Ihre Abrechnung. Privatabrechnung, KZV, HKP, Reklamationsmanagement.",
     type: "website",
     locale: "de_DE",
   },
@@ -37,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" className={`${display.variable} ${sans.variable}`}>
-      <body className="font-sans bg-ivory text-navy antialiased">{children}</body>
+      <body className="font-sans bg-white text-navy antialiased">{children}</body>
     </html>
   );
 }

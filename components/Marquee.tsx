@@ -4,11 +4,9 @@ import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion
 import { useRef } from "react";
 
 const items = [
-  { text: "Präzise", italic: true },
-  { text: "Effizient", italic: false },
-  { text: "Vertraulich", italic: true },
-  { text: "Prüfsicher", italic: false },
   { text: "Persönlich", italic: true },
+  { text: "Präzise", italic: false },
+  { text: "Zuverlässig", italic: true },
   { text: "Für Ihre Praxis", italic: false },
 ];
 
@@ -28,7 +26,7 @@ export default function Marquee() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden border-y border-line/60 bg-ivory py-16"
+      className="relative overflow-hidden border-y border-line bg-white py-16"
     >
       <motion.div
         style={{ x }}
@@ -43,7 +41,7 @@ export default function Marquee() {
             >
               {it.text}
             </span>
-            <span className="inline-flex h-3 w-3 shrink-0 rounded-full bg-steel/60" />
+            <span className="inline-flex h-3 w-3 shrink-0 rounded-full bg-petrol/25" />
           </span>
         ))}
       </motion.div>

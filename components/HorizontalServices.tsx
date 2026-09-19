@@ -9,8 +9,8 @@ const services = [
     title: "Privatabrechnung",
     lead: "GOZ · GOÄ · BEB · BEL II",
     body:
-      "Vollständige Privatabrechnung mit sauberer Begründung, Analogpositionen und Materialkosten. Sie geben ab, ich schaue jede Position an. Keine Sammelpauschalen.",
-    points: ["GOZ inkl. §2-Begründungen", "Analog- und Verlangensleistungen", "Fremd- und Eigenlabor"],
+      "Ich sichte jede Position, formuliere Begründungen sauber aus und nehme Analogpositionen sowie Materialkosten mit auf. Nichts wird pauschal abgehakt und nichts geht unter.",
+    points: ["GOZ inklusive §2-Begründungen", "Analog- und Verlangensleistungen", "Fremd- und Eigenlabor"],
     accent: "Kernstück",
   },
   {
@@ -18,8 +18,8 @@ const services = [
     title: "KZV-Abrechnung",
     lead: "BEMA · Quartalsabschluss · Gutachten",
     body:
-      "Quartalsweise BEMA-Abrechnung inklusive PAR, ZE und KBR. Gutachtenverfahren werden strukturiert vorbereitet, begleitet und bei Bedarf mit Widerspruch weitergeführt.",
-    points: ["PAR- und ZE-Abrechnung", "Gutachten-Dossiers", "Widerspruchsverfahren"],
+      "Quartalsweise BEMA-Abrechnung inklusive PAR, ZE und KBR. Bei Gutachten bereite ich die Unterlagen sorgfältig auf und begleite den Vorgang bis zur Klärung.",
+    points: ["PAR- und ZE-Abrechnung", "Gutachten-Dossiers", "Begleitung im Widerspruch"],
     accent: "Vertragszahnärztlich",
   },
   {
@@ -27,8 +27,8 @@ const services = [
     title: "HKP-Erstellung",
     lead: "Heil- und Kostenpläne",
     body:
-      "Prüfung, Erstellung und Nachbearbeitung von Heil- und Kostenplänen. Für ZE, PAR, KFO und KBR. Inkl. Alternativpläne und verständliche Patientenerklärungen.",
-    points: ["Alternativpläne", "Vor- und Gegenrechnung", "Patientenkommunikation"],
+      "Ich prüfe, erstelle und überarbeite Heil- und Kostenpläne für ZE, PAR, KFO und KBR. Auf Wunsch inklusive Alternativplänen und leicht verständlicher Patientenerklärung.",
+    points: ["Alternativpläne", "Vor- und Gegenrechnung", "Klare Patientenkommunikation"],
     accent: "Planungssicher",
   },
   {
@@ -36,27 +36,27 @@ const services = [
     title: "Reklamations­management",
     lead: "Erstattungsstellen · Beihilfe · PKV",
     body:
-      "Widersprüche gegen unbegründete Rechnungskürzungen. Fachlich fundiert, mit Rechtsprechung belegt, im Namen der Praxis. Aus Erfahrung eher stille als laute Klärung.",
-    points: ["Prüfberichte lesen", "Nachbegründungen", "Widerspruch bis Klage"],
-    accent: "Streitfrei",
+      "Bei Rechnungskürzungen schreibe ich die Nachbegründung im Namen der Praxis. Fachlich fundiert, ruhig im Ton, immer mit Blick auf eine gute Lösung.",
+    points: ["Prüfberichte lesen", "Nachbegründungen", "Widerspruch bis zur Klärung"],
+    accent: "In Ruhe geklärt",
   },
   {
     n: "05",
     title: "Praxisberatung",
     lead: "Prozesse · Software · Team",
     body:
-      "Analyse Ihrer Abrechnungsprozesse, Software-Setup, Dokumentationsstandards und Übergaben zwischen Behandler, Assistenz und Abrechnung. Ohne Beraterdeck.",
-    points: ["Prozess-Audit", "Software-Auswahl", "Schnittstellen"],
-    accent: "Strategisch",
+      "Wir schauen gemeinsam auf Ihre Abrechnungsabläufe, Software und Übergaben zwischen Behandlung, Assistenz und Verwaltung. Ohne Beraterjargon, mit konkreten Vorschlägen.",
+    points: ["Prozess-Sichtung", "Software-Auswahl", "Klare Schnittstellen"],
+    accent: "Nah an der Praxis",
   },
   {
     n: "06",
     title: "Team-Schulung",
-    lead: "Fortbildung für Praxisteams",
+    lead: "Fortbildung für Ihr Team",
     body:
-      "Kompaktkurse und Sprechstunden für Verwaltung und ZFAs. GOZ, BEMA, HKP, Fallbesprechungen. Auf Wunsch vor Ort mit Zertifikat oder als monatliche Praxisstunde.",
-    points: ["GOZ-Kompaktkurs", "BEMA für Einsteiger", "Monats-Sprechstunde"],
-    accent: "Weiterbildend",
+      "Kompakte Einheiten und Sprechstunden für Verwaltung und ZFAs. GOZ, BEMA, HKP, gemeinsame Fallbesprechungen. Auf Wunsch bei Ihnen vor Ort oder als regelmäßige Praxisstunde.",
+    points: ["GOZ-Kompaktkurs", "BEMA für Einsteiger", "Regelmäßige Sprechstunde"],
+    accent: "Wissen weitergeben",
   },
 ];
 
@@ -95,14 +95,13 @@ export default function HorizontalServices() {
   const progressBar = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section id="leistungen" ref={outerRef} className="relative h-[520vh] bg-ivory">
+    <section id="leistungen" ref={outerRef} className="relative h-[520vh] bg-white">
       <div className="sticky top-0 flex h-screen w-full flex-col overflow-hidden">
-        {/* Header */}
-        <div className="relative z-10 shrink-0 border-b border-line/40 bg-ivory/70 backdrop-blur-md">
+        <div className="relative z-10 shrink-0 border-b border-line bg-white/80 backdrop-blur-md">
           <div className="mx-auto flex max-w-[1500px] flex-wrap items-end justify-between gap-4 px-6 sm:px-10 pt-24 pb-6">
             <div>
               <div className="eyebrow flex items-center gap-3">
-                <span className="h-px w-8 bg-line" />
+                <span className="h-px w-8 bg-petrol/60" />
                 Leistungen
               </div>
               <h2 className="font-display mt-4 text-[clamp(28px,4.2vw,56px)] leading-[1.02] text-navy max-w-2xl">
@@ -122,7 +121,6 @@ export default function HorizontalServices() {
           </div>
         </div>
 
-        {/* Rail */}
         <div className="relative flex-1 overflow-hidden">
           <motion.div
             ref={railRef}
@@ -135,8 +133,7 @@ export default function HorizontalServices() {
           </motion.div>
         </div>
 
-        {/* Footer counter */}
-        <div className="relative z-10 shrink-0 border-t border-line/40 bg-ivory/70 backdrop-blur-md">
+        <div className="relative z-10 shrink-0 border-t border-line bg-white/80 backdrop-blur-md">
           <div className="mx-auto flex max-w-[1500px] items-baseline justify-between gap-4 px-6 sm:px-10 py-4">
             <div className="flex items-baseline gap-3">
               <span className="font-display text-[40px] leading-none text-navy">
@@ -155,11 +152,10 @@ export default function HorizontalServices() {
                 />
               </span>
             </div>
-            <div className="hidden md:flex items-center gap-6 divider-num !text-navy/50">
-              <span>Präzise</span>
-              <span>Effizient</span>
-              <span>Prüfsicher</span>
+            <div className="hidden md:flex items-center gap-6 divider-num">
               <span>Persönlich</span>
+              <span>Präzise</span>
+              <span>Zuverlässig</span>
             </div>
           </div>
         </div>
@@ -177,31 +173,31 @@ function ServiceCard({
   accent,
   index,
 }: (typeof services)[number] & { index: number }) {
-  const isDark = index % 2 === 1;
+  const isDeep = index % 2 === 1;
   return (
     <article
       className={`relative flex h-full max-h-[640px] w-[85vw] max-w-[680px] shrink-0 flex-col justify-between overflow-hidden rounded-lg p-8 sm:p-12 ${
-        isDark ? "bg-navy text-ivory" : "glass text-navy"
+        isDeep ? "bg-navy text-white" : "glass text-navy"
       }`}
     >
-      <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-petrol/20 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-petrol/25 blur-3xl" />
 
       <div className="flex items-start justify-between">
-        <div className={`divider-num ${isDark ? "!text-ivory/60" : ""}`}>{n}</div>
-        <div className={`eyebrow ${isDark ? "!text-ivory/70" : ""}`}>{accent}</div>
+        <div className={`divider-num ${isDeep ? "!text-white/60" : ""}`}>{n}</div>
+        <div className={`eyebrow ${isDeep ? "!text-white/70" : ""}`}>{accent}</div>
       </div>
 
       <div className="mt-4">
         <h3
           className={`font-display text-[clamp(34px,4.4vw,68px)] leading-[0.98] tracking-tight ${
-            isDark ? "text-ivory" : "text-navy"
+            isDeep ? "text-white" : "text-navy"
           }`}
         >
           {title}
         </h3>
         <div
           className={`eyebrow mt-5 !text-[10px] ${
-            isDark ? "!text-ivory/70" : "!text-steel"
+            isDeep ? "!text-white/70" : "!text-muted"
           }`}
         >
           {lead}
@@ -211,7 +207,7 @@ function ServiceCard({
       <div>
         <p
           className={`max-w-md text-[14px] leading-[1.75] ${
-            isDark ? "text-ivory/80" : "text-navy/75"
+            isDeep ? "text-white/85" : "text-navy/75"
           }`}
         >
           {body}
@@ -221,10 +217,10 @@ function ServiceCard({
             <li
               key={p}
               className={`flex items-center gap-3 text-[12px] tracking-[0.04em] ${
-                isDark ? "text-ivory/85" : "text-navy/75"
+                isDeep ? "text-white/85" : "text-navy/75"
               }`}
             >
-              <span className={`h-1 w-3 shrink-0 ${isDark ? "bg-mist" : "bg-petrol"}`} />
+              <span className={`h-1 w-3 shrink-0 ${isDeep ? "bg-white/70" : "bg-petrol"}`} />
               {p}
             </li>
           ))}

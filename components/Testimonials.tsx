@@ -3,28 +3,28 @@
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-const quotes = [
+const promises = [
   {
-    text: "Seit wir mit Frau Bauer arbeiten, hat sich unser Reklamationsvolumen mehr als halbiert. Und wir haben endlich Feierabend, wenn wir Feierabend haben.",
-    author: "Dr. med. dent. K. Reuter",
-    role: "Praxisinhaberin · München",
     n: "01",
+    title: "Sie sprechen immer mit mir.",
+    body:
+      "Keine Rufnummer im Callcenter, keine wechselnden Zuständigkeiten. Sie schreiben, ich antworte. Sie rufen an, ich hebe ab.",
   },
   {
-    text: "Ihr Blick auf unsere GOZ-Positionen hat uns im ersten Quartal einen fünfstelligen Betrag gerettet, der jahrelang untergegangen wäre.",
-    author: "Dr. med. dent. M. Weiler",
-    role: "Ästhetische Zahnheilkunde · Hamburg",
     n: "02",
+    title: "Jede Position wird angesehen.",
+    body:
+      "Bevor eine Rechnung rausgeht, hat sie meinen Blick bekommen. Analogleistungen, Materialkosten, Begründungen. Nichts wird pauschal verbucht.",
   },
   {
-    text: "Wir haben Frau Bauer zunächst für ein Software-Rollout gebucht. Heute übernimmt sie unsere komplette Privatabrechnung. Nichts liegt mehr auf Halde.",
-    author: "ZA F. Osterloh",
-    role: "Zentrum für Zahnheilkunde · Köln",
     n: "03",
+    title: "Sie wissen jederzeit, wo Sie stehen.",
+    body:
+      "Feste Abrechnungstage, klare Ansprechzeiten und ein kurzes Monatsbild. Es gibt keinen Vorgang, den ich nicht offen mit Ihnen bespreche.",
   },
 ];
 
-export default function Testimonials() {
+export default function HowIWork() {
   const ref = useRef<HTMLDivElement>(null);
   const shouldReduce = useReducedMotion();
   const { scrollYProgress } = useScroll({
@@ -33,44 +33,43 @@ export default function Testimonials() {
   });
 
   return (
-    <section ref={ref} className="relative h-[320vh] bg-ivory">
+    <section ref={ref} className="relative h-[320vh] bg-white">
       <div className="sticky top-0 h-screen w-full overflow-hidden">
         <div className="pointer-events-none absolute inset-0 grid-lines" />
 
         <div className="relative mx-auto flex h-full max-w-[1500px] flex-col justify-center px-6 sm:px-10">
           <div className="mb-16">
             <div className="eyebrow flex items-center gap-3">
-              <span className="h-px w-8 bg-line" />
-              Stimmen aus Praxen
+              <span className="h-px w-8 bg-petrol/60" />
+              So arbeite ich
             </div>
             <h2 className="font-display mt-4 text-[clamp(28px,3.6vw,52px)] leading-[1.02] text-navy max-w-2xl">
-              Was zählt, ist der Alltag danach.
-              <span className="italic text-petrol"> Nicht das Versprechen davor.</span>
+              Drei Zusagen.
+              <span className="italic text-petrol"> Ohne Kleingedrucktes.</span>
             </h2>
           </div>
 
           <div className="relative min-h-[62vh]">
-            {quotes.map((q, i) => (
-              <TestimonialLayer
-                key={q.n}
-                quote={q}
+            {promises.map((p, i) => (
+              <PromiseLayer
+                key={p.n}
+                promise={p}
                 index={i}
-                total={quotes.length}
+                total={promises.length}
                 progress={scrollYProgress}
                 shouldReduce={!!shouldReduce}
               />
             ))}
           </div>
 
-          {/* Progress marker unten */}
           <div className="mt-16 flex items-center gap-6">
-            {quotes.map((q, i) => (
+            {promises.map((p, i) => (
               <ProgressDot
-                key={q.n}
+                key={p.n}
                 progress={scrollYProgress}
                 index={i}
-                total={quotes.length}
-                label={q.n}
+                total={promises.length}
+                label={p.n}
               />
             ))}
           </div>
@@ -80,14 +79,14 @@ export default function Testimonials() {
   );
 }
 
-function TestimonialLayer({
-  quote,
+function PromiseLayer({
+  promise,
   index,
   total,
   progress,
   shouldReduce,
 }: {
-  quote: (typeof quotes)[number];
+  promise: (typeof promises)[number];
   index: number;
   total: number;
   progress: ReturnType<typeof useScroll>["scrollYProgress"];
@@ -111,7 +110,9 @@ function TestimonialLayer({
   const blur = useTransform(
     progress,
     [start, mid, end - seg * 0.15, end],
-    shouldReduce ? ["blur(0px)", "blur(0px)", "blur(0px)", "blur(0px)"] : ["blur(10px)", "blur(0px)", "blur(0px)", "blur(10px)"]
+    shouldReduce
+      ? ["blur(0px)", "blur(0px)", "blur(0px)", "blur(0px)"]
+      : ["blur(10px)", "blur(0px)", "blur(0px)", "blur(10px)"]
   );
 
   return (
@@ -122,31 +123,18 @@ function TestimonialLayer({
       <div className="grid gap-8 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-2">
           <div className="font-display text-[100px] leading-[0.85] text-petrol/95 italic">
-            {quote.n}
+            {promise.n}
           </div>
-          <div className="mt-4 divider-num">Referenz</div>
+          <div className="mt-4 divider-num">Zusage</div>
         </div>
         <div className="lg:col-span-9">
-          <svg
-            className="h-8 w-8 text-petrol/80"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            aria-hidden
-          >
-            <path d="M9 7H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v1a3 3 0 0 1-3 3v2c3 0 5-2 5-5V9a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h2v1a3 3 0 0 1-3 3v2c3 0 5-2 5-5V9a2 2 0 0 0-2-2Z" />
-          </svg>
-          <p className="font-display mt-6 text-[clamp(30px,4vw,60px)] leading-[1.08] text-navy tracking-[-0.005em]">
-            „{quote.text}"
+          <p className="font-display text-[clamp(30px,4vw,60px)] leading-[1.08] text-navy tracking-[-0.005em]">
+            {promise.title}
           </p>
           <div className="hairline my-10 max-w-[80px]" />
-          <div>
-            <div className="text-[16px] text-navy font-medium tracking-tight">
-              {quote.author}
-            </div>
-            <div className="mt-1 text-[11px] uppercase tracking-[0.18em] text-navy/55">
-              {quote.role}
-            </div>
-          </div>
+          <p className="text-[15px] leading-[1.85] text-navy/75 max-w-2xl">
+            {promise.body}
+          </p>
         </div>
       </div>
     </motion.article>

@@ -8,41 +8,41 @@ import MagneticButton from "./MagneticButton";
 
 const faqs = [
   {
-    q: "Wie läuft die Zusammenarbeit konkret ab?",
-    a: "Nach dem Erstgespräch bekommen Sie ein transparentes Angebot mit klarem Umfang und festem Startdatum. Nach Vertragsunterzeichnung erhalte ich einen abrechnungsseitigen Zugang zu Ihrer Praxissoftware. Sie behalten die Hoheit über Ihre Praxis. Ich arbeite im Hintergrund, mit festen Abrechnungstagen pro Woche und monatlichem Kurzreporting.",
+    q: "Wie läuft die Zusammenarbeit ab?",
+    a: "Nach dem Kennenlernen bekommen Sie ein Angebot mit klarem Umfang und festem Startdatum. Sobald wir uns einig sind, richte ich einen abrechnungsseitigen Zugang zu Ihrer Praxissoftware ein. Sie behalten die Hoheit über Ihre Praxis. Ich arbeite im Hintergrund, mit festen Abrechnungstagen pro Woche und einem kurzen Monatsbild.",
   },
   {
     q: "Mit welchen Praxissoftwares arbeiten Sie?",
-    a: "Ich arbeite mit den gängigen Systemen im DACH-Raum, unter anderem CHARLY, DAMPSOFT DS-Win-Plus, evident, ivoris, Z1 und LinuDent. Neue Systeme lerne ich zügig ein. Falls Sie mit Ihrer aktuellen Software unzufrieden sind, berate ich Sie unabhängig zur Auswahl.",
+    a: "Ich arbeite mit den gängigen Systemen, unter anderem CHARLY, DAMPSOFT DS-Win-Plus, evident, ivoris, Z1 und LinuDent. Neue Systeme lerne ich zügig ein. Wenn Sie mit Ihrer aktuellen Software unzufrieden sind, schaue ich unabhängig mit Ihnen auf Alternativen.",
   },
   {
-    q: "Wie stellen Sie Datenschutz und Diskretion sicher?",
-    a: "Ich arbeite ausschließlich über verschlüsselte Zugänge, unterzeichne eine Vereinbarung zur Auftragsverarbeitung nach Art. 28 DSGVO und behandle sämtliche Praxis- und Patientendaten mit höchster Vertraulichkeit. Auf Wunsch erhalten Sie ein detailliertes Sicherheitskonzept vor Vertragsabschluss.",
+    q: "Wie halten Sie es mit Datenschutz und Diskretion?",
+    a: "Ich arbeite ausschließlich über verschlüsselte Zugänge, unterzeichne eine Vereinbarung zur Auftragsverarbeitung nach Art. 28 DSGVO und behandle Praxis- und Patientendaten vertraulich. Auf Wunsch besprechen wir das Sicherheitskonzept vorab in Ruhe.",
   },
   {
     q: "Was kostet Ihre Unterstützung?",
-    a: "Das hängt vom Umfang ab. Punktuelle Reklamationen und Fallberatungen rechne ich im Stundensatz ab. Für laufende Betreuung gibt es Pauschalen ab dem monatlichen Abrechnungsvolumen. In den meisten Fällen refinanziert sich die Zusammenarbeit bereits im ersten Quartal durch nicht mehr verlorene Positionen.",
+    a: "Das hängt vom Umfang ab. Punktuelle Fälle rechne ich im Stundensatz ab. Für die laufende Betreuung gibt es Pauschalen, die sich am monatlichen Abrechnungsvolumen orientieren. Ich lege alles offen und Sie entscheiden, was für Sie passt.",
   },
   {
     q: "Übernehmen Sie auch einzelne Fälle oder nur ganze Praxen?",
-    a: "Beides. Sie können mich als externe Abrechnungsstelle für Ihre komplette Privatabrechnung buchen oder gezielt für einzelne HKP-Fälle, komplexe Reklamationen und Gutachtenverfahren. Manche Praxen holen mich nur einmal im Quartal für einen strukturierten Abrechnungs-Check.",
+    a: "Beides. Sie können mich als externe Unterstützung für Ihre komplette Privatabrechnung buchen oder gezielt für einzelne HKP-Fälle, komplexe Reklamationen und Gutachtenverfahren. Manche Praxen holen mich einmal im Quartal für einen ruhigen Abrechnungs-Check.",
   },
   {
-    q: "In welchem Umkreis arbeiten Sie?",
-    a: "Ich betreue Praxen im gesamten DACH-Raum. Vor-Ort-Termine sind in Deutschland und der Schweiz möglich, laufende Betreuung erfolgt digital. Auf Wunsch komme ich für ein Kick-off oder einen Team-Schulungstag persönlich in Ihre Praxis.",
+    q: "Wo sitzen Sie und arbeiten Sie auch mit weiter entfernten Praxen?",
+    a: "Ich sitze in Saarlouis und arbeite mit Praxen deutschlandweit digital zusammen. Für ein persönliches Kennenlernen oder eine Team-Schulung komme ich gerne zu Ihnen in die Praxis.",
   },
 ];
 
 export default function FAQ() {
   return (
-    <section id="faq" className="relative overflow-hidden bg-mist/40 py-32 sm:py-40">
+    <section id="faq" className="relative overflow-hidden bg-mist py-32 sm:py-40">
       <div className="pointer-events-none absolute inset-0 grid-lines" />
 
       <div className="relative mx-auto max-w-[1500px] px-6 sm:px-10">
         <div className="grid gap-16 lg:grid-cols-12">
           <Reveal className="lg:col-span-4 lg:sticky lg:top-32 lg:h-fit">
             <div className="eyebrow flex items-center gap-3">
-              <span className="h-px w-8 bg-line" />
+              <span className="h-px w-8 bg-petrol/60" />
               Häufige Fragen
             </div>
             <h2 className="font-display mt-6 text-[clamp(48px,6vw,110px)] leading-[0.94] tracking-[-0.015em] text-navy">
@@ -51,8 +51,8 @@ export default function FAQ() {
             </h2>
             <p className="mt-8 max-w-sm text-navy/70 text-[15px] leading-[1.75]">
               Antworten zu Zusammenarbeit, Software, Datenschutz und
-              Investition. Sonst gerne direkt fragen. Ich melde mich innerhalb
-              eines Werktages.
+              Investition. Ihre Frage ist nicht dabei? Rufen Sie mich gerne
+              an, wir gehen sie gemeinsam durch.
             </p>
             <div className="mt-10">
               <MagneticButton href="#kontakt" variant="outline">
@@ -62,7 +62,7 @@ export default function FAQ() {
           </Reveal>
 
           <div className="lg:col-span-8">
-            <ul className="border-t border-line/70">
+            <ul className="border-t border-line">
               {faqs.map((f, i) => (
                 <FaqItem key={f.q} index={i} {...f} />
               ))}
@@ -77,13 +77,13 @@ export default function FAQ() {
 function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
   const [open, setOpen] = useState(false);
   return (
-    <li className="border-b border-line/70 group">
+    <li className="border-b border-line group">
       <button
         onClick={() => setOpen((v) => !v)}
         className="grid w-full grid-cols-[40px_1fr_44px] items-center gap-6 py-7 text-left"
         aria-expanded={open}
       >
-        <span className="divider-num !text-steel/80">
+        <span className="divider-num !text-muted">
           {String(index + 1).padStart(2, "0")}
         </span>
         <span
@@ -94,10 +94,10 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
           {q}
         </span>
         <motion.span
-          animate={{ rotate: open ? 45 : 0, backgroundColor: open ? "#304A58" : "rgba(255,255,255,0)" }}
+          animate={{ rotate: open ? 45 : 0, backgroundColor: open ? "#2F5F96" : "rgba(255,255,255,0)" }}
           transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
           className={`ml-auto inline-flex h-11 w-11 items-center justify-center rounded-full border text-lg ${
-            open ? "text-ivory border-petrol" : "text-navy/80 border-line/80"
+            open ? "text-white border-petrol" : "text-navy/80 border-line"
           }`}
           aria-hidden
         >

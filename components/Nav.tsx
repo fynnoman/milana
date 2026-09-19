@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
+
 
 const items = [
   { href: "#leistungen", label: "Leistungen" },
@@ -13,7 +13,7 @@ const items = [
 ];
 
 export default function Nav() {
-  const { scrollY, scrollYProgress } = useScroll();
+  const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -23,12 +23,6 @@ export default function Nav() {
 
   return (
     <>
-      {/* Scroll progress line */}
-      <motion.div
-        style={{ scaleX: scrollYProgress }}
-        className="fixed top-0 left-0 right-0 z-[60] h-[2px] origin-left bg-petrol"
-      />
-
       <motion.header
         initial={{ y: -12, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -42,22 +36,15 @@ export default function Nav() {
         >
           <div className="flex items-center justify-between">
             <Link href="#top" className="flex items-center gap-3 group">
-              <div className="relative h-9 w-9 overflow-hidden rounded-full ring-1 ring-line/70">
-                <Image
-                  src="/logo.jpeg"
-                  alt="MB Zahnärztliche Abrechnung"
-                  fill
-                  sizes="36px"
-                  className="object-cover"
-                  priority
-                />
+              <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full ring-1 ring-line grid place-items-center bg-navy text-white">
+                <span className="font-display text-[15px] leading-none">MK</span>
               </div>
               <div className="hidden sm:flex flex-col leading-none">
                 <span className="font-display text-lg text-navy tracking-tight">
-                  MB Abrechnung
+                  Milana Kollmann
                 </span>
                 <span className="eyebrow mt-0.5 !text-[9px]">
-                  Zahnärztliche Abrechnungsexpertin
+                  Zahnärztliche Abrechnung
                 </span>
               </div>
             </Link>
@@ -67,7 +54,7 @@ export default function Nav() {
                 <a
                   key={it.href}
                   href={it.href}
-                  className="text-[12px] uppercase tracking-[0.16em] text-navy/80 hover:text-navy transition-colors relative group"
+                  className="text-[12px] uppercase tracking-[0.16em] text-navy/80 hover:text-petrol transition-colors relative group"
                 >
                   {it.label}
                   <span className="absolute left-0 -bottom-1 h-px w-0 bg-petrol transition-all duration-300 ease-out group-hover:w-full" />
@@ -78,14 +65,14 @@ export default function Nav() {
             <div className="flex items-center gap-2">
               <a
                 href="#kontakt"
-                className="hidden sm:inline-flex items-center gap-2 rounded-full bg-navy px-4 py-2 text-[11px] uppercase tracking-[0.16em] text-ivory hover:bg-ink transition-colors"
+                className="hidden sm:inline-flex items-center gap-2 rounded-full bg-navy px-4 py-2 text-[11px] uppercase tracking-[0.16em] text-white hover:bg-deep transition-colors"
               >
-                Erstgespräch
+                Kennenlernen
                 <span className="arrow">→</span>
               </a>
               <button
                 onClick={() => setOpen((v) => !v)}
-                className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-line/60 text-navy"
+                className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-line text-navy"
                 aria-label="Menü"
               >
                 <span className="relative block h-3 w-4">
@@ -124,9 +111,9 @@ export default function Nav() {
               <a
                 href="#kontakt"
                 onClick={() => setOpen(false)}
-                className="self-start mt-2 rounded-full bg-navy px-5 py-2.5 text-[11px] uppercase tracking-[0.16em] text-ivory"
+                className="self-start mt-2 rounded-full bg-navy px-5 py-2.5 text-[11px] uppercase tracking-[0.16em] text-white"
               >
-                Erstgespräch →
+                Kennenlernen →
               </a>
             </div>
           </motion.div>
