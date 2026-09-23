@@ -107,7 +107,7 @@ export default function Hero() {
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 1.4, delay: 1.6, ease: [0.77, 0, 0.175, 1] }}
-              className="block h-px w-20 bg-petrol origin-left"
+              className="block h-px w-20 bg-gold origin-left"
             />
             <span className="font-display italic text-[22px] text-navy/85">
               Milana Kollmann

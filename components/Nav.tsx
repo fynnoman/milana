@@ -48,10 +48,10 @@ export default function Nav() {
                 <a
                   key={it.href}
                   href={it.href}
-                  className="text-[12px] uppercase tracking-[0.16em] text-navy/80 hover:text-petrol transition-colors relative group"
+                  className="text-[12px] uppercase tracking-[0.16em] text-navy/80 hover:text-navy transition-colors relative group"
                 >
                   {it.label}
-                  <span className="absolute left-0 -bottom-1 h-px w-0 bg-petrol transition-all duration-300 ease-out group-hover:w-full" />
+                  <span className="absolute left-0 -bottom-1 h-px w-0 bg-gold transition-all duration-300 ease-out group-hover:w-full" />
                 </a>
               ))}
             </nav>

@@ -19,6 +19,9 @@ const config: Config = {
         blue: "#2F5F96",
         navy: "#214267",
         deep: "#17324F",
+        gold: "#B18A4A",
+        "gold-soft": "#D9B979",
+        "gold-deep": "#8F6E39",
       },
       fontFamily: {
         display: ["var(--font-display)", "Cormorant Garamond", "Georgia", "serif"],
