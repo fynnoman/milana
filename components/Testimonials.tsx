@@ -28,8 +28,8 @@ const promises = [
     title: "Sie wissen jederzeit, wo Sie stehen.",
     body:
       "Feste Abrechnungstage, klare Ansprechzeiten und ein kurzes Monatsbild. Es gibt keinen Vorgang, den ich nicht offen mit Ihnen bespreche.",
-    image: "/images/milana-desk.jpg",
-    alt: "Aufgeräumter Arbeitsplatz in der Praxis",
+    image: "/images/milana-overview.jpg",
+    alt: "Milana Kollmann am Schreibtisch im Überblick",
   },
 ];
 
