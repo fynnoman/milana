@@ -76,8 +76,10 @@ export default function Contact() {
             <div className="mt-14 flex items-center gap-4 rounded-md glass-deep px-5 py-4 w-fit">
               <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full ring-1 ring-white/30 bg-white/10">
                 <img
-                  src="/images/milana-call.jpg"
+                  src="/images/milana-call.webp"
                   alt="Milana Kollmann"
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover object-top"
                 />
               </div>

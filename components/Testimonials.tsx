@@ -10,7 +10,7 @@ const promises = [
     title: "Sie sprechen immer mit mir.",
     body:
       "Keine Rufnummer im Callcenter, keine wechselnden Zuständigkeiten. Sie schreiben, ich antworte. Sie rufen an, ich hebe ab.",
-    image: "/images/milana-hero.jpg",
+    image: "/images/milana-hero.webp",
     alt: "Milana Kollmann im Telefongespräch",
   },
   {
@@ -19,7 +19,7 @@ const promises = [
     title: "Jede Position wird angesehen.",
     body:
       "Bevor eine Rechnung rausgeht, hat sie meinen Blick bekommen. Analogleistungen, Materialkosten, Begründungen. Nichts wird pauschal verbucht.",
-    image: "/images/milana-focus.jpg",
+    image: "/images/milana-focus.webp",
     alt: "Konzentrierter Blick auf den Bildschirm",
   },
   {
@@ -28,7 +28,7 @@ const promises = [
     title: "Sie wissen jederzeit, wo Sie stehen.",
     body:
       "Feste Abrechnungstage, klare Ansprechzeiten und ein kurzes Monatsbild. Es gibt keinen Vorgang, den ich nicht offen mit Ihnen bespreche.",
-    image: "/images/milana-overview.jpg",
+    image: "/images/milana-overview.webp",
     alt: "Milana Kollmann am Schreibtisch im Überblick",
   },
 ];
@@ -144,6 +144,8 @@ function ImageLayer({
         style={{ scale }}
         src={src}
         alt={alt}
+        loading="lazy"
+        decoding="async"
         className="h-full w-full object-cover object-center"
       />
     </motion.div>

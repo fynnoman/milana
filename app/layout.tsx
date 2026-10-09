@@ -36,6 +36,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" className={`${display.variable} ${sans.variable}`}>
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/milana-hero.webp"
+          fetchPriority="high"
+        />
+      </head>
       <body className="font-sans bg-white text-navy antialiased">{children}</body>
     </html>
   );

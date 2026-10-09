@@ -10,8 +10,10 @@ export default function Footer() {
           <div>
             <div className="relative w-[120px] aspect-square overflow-hidden rounded-full ring-1 ring-line bg-white">
               <img
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Milana Kollmann · Zahnärztliche Abrechnung"
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full object-cover select-none"
               />
             </div>

@@ -41,8 +41,10 @@ export default function Hero() {
       >
         <motion.div style={{ scale: photoScale }} className="absolute inset-0">
           <img
-            src="/images/milana-hero.jpg"
+            src="/images/milana-hero.webp"
             alt="Milana Kollmann am Schreibtisch im Telefonat"
+            fetchPriority="high"
+            decoding="async"
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
         </motion.div>
@@ -63,8 +65,10 @@ export default function Hero() {
         className="hidden sm:block absolute top-24 right-6 sm:top-28 sm:right-10 z-20 w-[130px] sm:w-[160px] aspect-square overflow-hidden rounded-full ring-1 ring-line bg-white shadow-card"
       >
         <img
-          src="/logo.png"
+          src="/logo.webp"
           alt="Milana Kollmann · Zahnärztliche Abrechnung"
+          fetchPriority="high"
+          decoding="async"
           className="h-full w-full object-cover select-none"
         />
       </motion.div>

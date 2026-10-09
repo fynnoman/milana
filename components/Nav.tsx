@@ -37,8 +37,10 @@ export default function Nav() {
           <div className="flex items-center justify-between">
             <Link href="#top" className="flex items-center group">
               <img
-                src="/wordmark.png"
+                src="/wordmark.webp"
                 alt="MB Zahnabrechnung"
+                fetchPriority="high"
+                decoding="async"
                 className="h-11 sm:h-12 w-auto select-none"
               />
             </Link>

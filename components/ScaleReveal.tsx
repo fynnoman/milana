@@ -5,8 +5,10 @@ export default function ScaleReveal() {
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-navy text-white">
       <div className="absolute inset-0">
         <img
-          src="/images/milana-workspace.jpg"
+          src="/images/milana-workspace.webp"
           alt="Arbeitsplatz von Milana Kollmann"
+          loading="lazy"
+          decoding="async"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-navy/70" />

@@ -57,8 +57,10 @@ export default function About() {
               <div className="relative overflow-hidden rounded-md aspect-[5/6] shadow-card">
                 <motion.div style={{ y: bigImgY, scale: bigImgScale }} className="absolute inset-0">
                   <img
-                    src="/images/milana-portrait.jpg"
+                    src="/images/milana-portrait.webp"
                     alt="Porträt Milana Kollmann"
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover object-center"
                   />
                 </motion.div>
@@ -69,8 +71,10 @@ export default function About() {
               <div className="mt-6 grid grid-cols-5 gap-6 items-start">
                 <div className="col-span-3 relative overflow-hidden rounded-md aspect-[4/3] shadow-card">
                   <img
-                    src="/images/milana-detail.jpg"
+                    src="/images/milana-detail.webp"
                     alt="Gläser und Mineralwasser auf dem Besprechungstisch"
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover"
                   />
                 </div>
@@ -92,8 +96,10 @@ export default function About() {
             <Reveal>
               <div className="relative overflow-hidden rounded-md aspect-[4/5] shadow-card mb-10">
                 <img
-                  src="/images/milana-stance.jpg"
+                  src="/images/milana-stance.webp"
                   alt="Milana Kollmann an ihrem Arbeitsplatz"
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover object-center"
                 />
               </div>
