@@ -62,16 +62,6 @@ export default function About() {
                     className="h-full w-full object-cover object-center"
                   />
                 </motion.div>
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/25 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-white">
-                  <div>
-                    <div className="eyebrow !text-white/75">Arbeitshaltung</div>
-                    <div className="font-display text-2xl mt-1">Ruhe und Sorgfalt.</div>
-                  </div>
-                  <div className="text-[11px] uppercase tracking-[0.18em] text-white/70">
-                    01
-                  </div>
-                </div>
               </div>
             </Reveal>
 
@@ -106,11 +96,6 @@ export default function About() {
                   alt="Milana Kollmann an ihrem Arbeitsplatz"
                   className="h-full w-full object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/20 via-transparent to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-white">
-                  <div className="eyebrow !text-white/75">Haltung</div>
-                  <div className="text-[11px] uppercase tracking-[0.18em] text-white/70">02</div>
-                </div>
               </div>
             </Reveal>
 
