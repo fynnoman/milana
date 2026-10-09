@@ -74,8 +74,12 @@ export default function Contact() {
             </div>
 
             <div className="mt-14 flex items-center gap-4 rounded-md glass-deep px-5 py-4 w-fit">
-              <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full ring-1 ring-white/30 grid place-items-center bg-white/10">
-                <span className="font-display italic text-[18px] leading-none text-white">MK</span>
+              <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full ring-1 ring-white/30 bg-white/10">
+                <img
+                  src="/images/milana-call.jpg"
+                  alt="Milana Kollmann"
+                  className="h-full w-full object-cover object-top"
+                />
               </div>
               <div>
                 <div className="font-display text-xl leading-tight">Milana Kollmann</div>

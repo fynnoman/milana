@@ -5,8 +5,8 @@ export default function ScaleReveal() {
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-navy text-white">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=2200&q=82"
-          alt="Ruhige, hell gestaltete Zahnarztpraxis"
+          src="/images/milana-workspace.jpg"
+          alt="Arbeitsplatz von Milana Kollmann"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-navy/70" />

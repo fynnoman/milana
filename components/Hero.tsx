@@ -41,9 +41,9 @@ export default function Hero() {
       >
         <motion.div style={{ scale: photoScale }} className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=2200&q=85"
-            alt="Ruhiger Arbeitsplatz einer Zahnarztpraxis"
-            className="absolute inset-0 h-full w-full object-cover"
+            src="/images/milana-hero.jpg"
+            alt="Milana Kollmann am Schreibtisch im Telefonat"
+            className="absolute inset-0 h-full w-full object-cover object-center"
           />
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/75 to-white/10 lg:via-white/60" />

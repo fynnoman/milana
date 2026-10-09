@@ -57,9 +57,9 @@ export default function About() {
               <div className="relative overflow-hidden rounded-md aspect-[5/6] shadow-card">
                 <motion.div style={{ y: bigImgY, scale: bigImgScale }} className="absolute inset-0">
                   <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1800&q=82"
-                    alt="Ruhiger Arbeitsplatz"
-                    className="h-full w-full object-cover"
+                    src="/images/milana-portrait.jpg"
+                    alt="Porträt Milana Kollmann"
+                    className="h-full w-full object-cover object-center"
                   />
                 </motion.div>
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/25 via-transparent to-transparent" />
@@ -74,9 +74,46 @@ export default function About() {
                 </div>
               </div>
             </Reveal>
+
+            <Reveal delay={0.15}>
+              <div className="mt-6 grid grid-cols-5 gap-6 items-start">
+                <div className="col-span-3 relative overflow-hidden rounded-md aspect-[4/3] shadow-card">
+                  <img
+                    src="/images/milana-detail.jpg"
+                    alt="Gläser und Mineralwasser auf dem Besprechungstisch"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="col-span-2 pt-2">
+                  <div className="eyebrow">Atmosphäre</div>
+                  <div className="font-display italic text-petrol text-[clamp(20px,2vw,28px)] leading-tight mt-2">
+                    In Ruhe, mit Zeit.
+                  </div>
+                  <div className="hairline my-4 max-w-[60px]" />
+                  <div className="text-[12px] tracking-[0.04em] text-navy/60 leading-[1.6]">
+                    Jedes Gespräch bekommt den Raum, den es braucht.
+                  </div>
+                </div>
+              </div>
+            </Reveal>
           </div>
 
           <div className="lg:col-span-5">
+            <Reveal>
+              <div className="relative overflow-hidden rounded-md aspect-[4/5] shadow-card mb-10">
+                <img
+                  src="/images/milana-stance.jpg"
+                  alt="Milana Kollmann an ihrem Arbeitsplatz"
+                  className="h-full w-full object-cover object-center"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/20 via-transparent to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-white">
+                  <div className="eyebrow !text-white/75">Haltung</div>
+                  <div className="text-[11px] uppercase tracking-[0.18em] text-white/70">02</div>
+                </div>
+              </div>
+            </Reveal>
+
             <Reveal>
               <blockquote className="font-display italic text-[clamp(30px,3.4vw,44px)] leading-[1.1] text-navy tracking-[-0.005em]">
                 „Präzise Abrechnung ist eine Frage der Aufmerksamkeit.
