@@ -27,11 +27,21 @@ export default function DatenschutzPage() {
             <div>
               <div className="eyebrow !text-navy/60 mb-3">Verantwortliche Stelle</div>
               <p>{SITE.legalName}</p>
-              <p>Anschrift und Kontaktdaten werden in Kürze ergänzt.</p>
+              <p>{SITE.address.streetAddress}</p>
+              <p>
+                {SITE.address.postalCode} {SITE.address.addressLocality}
+              </p>
+              <p>
+                Telefon:{" "}
+                <a className="text-petrol hover:text-navy transition-colors" href={SITE.contact.phoneHref}>
+                  {SITE.contact.phone}
+                </a>
+              </p>
             </div>
             <p>
               Diese Website verarbeitet derzeit keine personenbezogenen Daten
-              über Formulare. Kontaktmöglichkeiten werden in Kürze ergänzt.
+              über Formulare. Für Terminanfragen nutzen Sie bitte den
+              telefonischen Weg.
             </p>
             <p>
               Beim Aufruf der Website werden technisch notwendige Daten

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import MagneticButton from "@/components/MagneticButton";
 import { SERVICES, SITE, type Service } from "@/lib/site";
 
 type Props = { service: Service };
@@ -57,9 +58,9 @@ export default function ServicePage({ service }: Props) {
           </ul>
 
           <div className="mt-14 flex flex-wrap gap-4">
-            <span className="text-navy/60 text-[13px]">
-              Kontaktdaten folgen in Kürze.
-            </span>
+            <MagneticButton href="tel:+491742122526" variant="primary">
+              Jetzt anrufen <span className="arrow">→</span>
+            </MagneticButton>
           </div>
         </div>
       </section>
@@ -149,9 +150,9 @@ export default function ServicePage({ service }: Props) {
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
-            <span className="text-white/70 text-[13px]">
-              Kontaktdaten folgen in Kürze.
-            </span>
+            <MagneticButton href="tel:+491742122526" variant="primary">
+              Jetzt anrufen <span className="arrow">→</span>
+            </MagneticButton>
           </div>
         </div>
       </section>

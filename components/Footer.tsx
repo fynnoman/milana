@@ -50,11 +50,13 @@ export default function Footer() {
             <div className="eyebrow">Kontakt</div>
             <ul className="mt-5 space-y-2.5 text-[14px] text-navy/80">
               <li className="text-navy/90 font-medium">Milana Kollmann</li>
+              <li>
+                <a href="tel:+491742122526" className="hover:text-petrol transition-colors">
+                  +49 174 2122526
+                </a>
+              </li>
               <li className="text-navy/60 text-[13px] mt-3">
                 Saarland · Deutschlandweit digital
-              </li>
-              <li className="text-navy/60 text-[13px]">
-                Kontaktdaten folgen in Kürze.
               </li>
             </ul>
           </div>
