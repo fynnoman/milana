@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import SplitText from "./SplitText";
@@ -39,12 +40,14 @@ export default function Hero() {
         className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[58%] overflow-hidden"
       >
         <motion.div style={{ scale: photoScale }} className="absolute inset-0">
-          <img
+          <Image
             src="/images/milana-hero.webp"
             alt="Milana Kollmann am Schreibtisch im Telefonat"
-            fetchPriority="high"
-            decoding="async"
-            className="absolute inset-0 h-full w-full object-cover object-center"
+            fill
+            priority
+            quality={78}
+            sizes="(min-width: 1024px) 58vw, 100vw"
+            className="object-cover object-center"
           />
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/75 to-white/10 lg:via-white/60" />
@@ -63,11 +66,13 @@ export default function Hero() {
         transition={{ duration: 0.9, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
         className="hidden sm:block absolute top-24 right-6 sm:top-28 sm:right-10 z-20 w-[130px] sm:w-[160px] aspect-square overflow-hidden rounded-full ring-1 ring-line bg-white shadow-card"
       >
-        <img
+        <Image
           src="/logo.webp"
           alt="Milana Kollmann · Zahnärztliche Abrechnung"
-          fetchPriority="high"
-          decoding="async"
+          width={500}
+          height={500}
+          priority
+          sizes="(min-width: 640px) 160px, 130px"
           className="h-full w-full object-cover select-none"
         />
       </motion.div>

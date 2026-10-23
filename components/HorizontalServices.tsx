@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 const services = [
   {
     n: "01",
+    slug: "privatabrechnung",
     title: "Privatabrechnung",
     lead: "GOZ · GOÄ · BEB · BEL II",
     body:
@@ -15,6 +16,7 @@ const services = [
   },
   {
     n: "02",
+    slug: "kzv-abrechnung",
     title: "KZV-Abrechnung",
     lead: "BEMA · Quartalsabschluss · Gutachten",
     body:
@@ -24,6 +26,7 @@ const services = [
   },
   {
     n: "03",
+    slug: "hkp",
     title: "HKP-Erstellung",
     lead: "Heil- und Kostenpläne",
     body:
@@ -33,6 +36,7 @@ const services = [
   },
   {
     n: "04",
+    slug: "reklamationsmanagement",
     title: "Reklamations­management",
     lead: "Erstattungsstellen · Beihilfe · PKV",
     body:
@@ -42,6 +46,7 @@ const services = [
   },
   {
     n: "05",
+    slug: "praxisberatung",
     title: "Praxisberatung",
     lead: "Prozesse · Abläufe · Übergaben",
     body:
@@ -198,6 +203,7 @@ export default function HorizontalServices() {
 
 function ServiceCard({
   n,
+  slug,
   title,
   lead,
   body,
@@ -268,6 +274,16 @@ function ServiceCard({
             </li>
           ))}
         </ul>
+        <a
+          href={`/leistungen/${slug}`}
+          className={`mt-7 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.16em] transition-colors ${
+            isDeep
+              ? "text-white/80 hover:text-white"
+              : "text-petrol hover:text-navy"
+          }`}
+        >
+          Mehr zur Leistung <span className="arrow">→</span>
+        </a>
       </div>
     </article>
   );

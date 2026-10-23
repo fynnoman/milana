@@ -1,15 +1,18 @@
 "use client";
 
+import Image from "next/image";
+
 export default function ScaleReveal() {
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-navy text-white">
       <div className="absolute inset-0">
-        <img
+        <Image
           src="/images/milana-workspace.webp"
           alt="Arbeitsplatz von Milana Kollmann"
-          loading="lazy"
-          decoding="async"
-          className="h-full w-full object-cover"
+          fill
+          quality={75}
+          sizes="100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-navy/70" />
       </div>

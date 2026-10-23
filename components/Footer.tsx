@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -9,12 +11,12 @@ export default function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="relative w-[120px] aspect-square overflow-hidden rounded-full ring-1 ring-line bg-white">
-              <img
+              <Image
                 src="/logo.webp"
                 alt="Milana Kollmann · Zahnärztliche Abrechnung"
-                loading="lazy"
-                decoding="async"
-                className="h-full w-full object-cover select-none"
+                fill
+                sizes="120px"
+                className="object-cover select-none"
               />
             </div>
             <p className="mt-6 text-[13px] leading-[1.75] text-navy/70 max-w-[260px]">
@@ -53,8 +55,13 @@ export default function Footer() {
                   +49 174 212 25 26
                 </a>
               </li>
+              <li>
+                <a href="mailto:info@mb-zahnabrechnung.de" className="hover:text-petrol transition-colors">
+                  info@mb-zahnabrechnung.de
+                </a>
+              </li>
               <li className="text-navy/60 text-[13px] mt-3">
-                Saarlouis
+                Saarland · Deutschlandweit digital
               </li>
             </ul>
           </div>
@@ -65,8 +72,8 @@ export default function Footer() {
             © {year} Milana Kollmann · Zahnärztliche Abrechnung
           </div>
           <div className="flex flex-wrap items-center gap-6 text-[12px] text-navy/60">
-            <a href="#" className="hover:text-petrol transition-colors">Impressum</a>
-            <a href="#" className="hover:text-petrol transition-colors">Datenschutz</a>
+            <a href="/impressum" className="hover:text-petrol transition-colors">Impressum</a>
+            <a href="/datenschutz" className="hover:text-petrol transition-colors">Datenschutz</a>
           </div>
         </div>
       </div>

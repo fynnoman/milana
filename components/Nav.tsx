@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
 
@@ -36,11 +37,13 @@ export default function Nav() {
         >
           <div className="flex items-center justify-between">
             <Link href="#top" className="flex items-center group">
-              <img
+              <Image
                 src="/wordmark.webp"
                 alt="MB Zahnabrechnung"
-                fetchPriority="high"
-                decoding="async"
+                width={600}
+                height={202}
+                priority
+                sizes="(min-width: 640px) 144px, 132px"
                 className="h-11 sm:h-12 w-auto select-none"
               />
             </Link>

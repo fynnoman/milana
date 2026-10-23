@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -140,14 +141,16 @@ function ImageLayer({
       style={{ opacity }}
       className="absolute inset-0 overflow-hidden rounded-md shadow-card"
     >
-      <motion.img
-        style={{ scale }}
-        src={src}
-        alt={alt}
-        loading="lazy"
-        decoding="async"
-        className="h-full w-full object-cover object-center"
-      />
+      <motion.div style={{ scale }} className="absolute inset-0">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          quality={75}
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover object-center"
+        />
+      </motion.div>
     </motion.div>
   );
 }
