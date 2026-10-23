@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { m, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import SplitText from "./SplitText";
 
@@ -43,13 +43,13 @@ export default function Pillars() {
       <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy to-deep" />
       <div className="pointer-events-none absolute inset-0 [background-image:radial-gradient(circle_at_15%_20%,rgba(47,95,150,0.35),transparent_45%)]" />
 
-      <motion.div
+      <m.div
         style={{ x: bigWordX }}
         aria-hidden
         className="pointer-events-none absolute bottom-0 -left-4 select-none font-display italic text-[24vw] leading-[0.85] tracking-tight text-white/[0.05] whitespace-nowrap"
       >
         Handschrift
-      </motion.div>
+      </m.div>
 
       <div className="relative mx-auto max-w-[1500px] px-6 sm:px-10 py-32 sm:py-44">
         <div className="flex flex-wrap items-end justify-between gap-8">
@@ -74,7 +74,7 @@ export default function Pillars() {
 
         <div className="mt-24 grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-3">
           {pillars.map((p, i) => (
-            <motion.div
+            <m.div
               key={p.k}
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ export default function Pillars() {
               <p className="mt-4 text-[15px] text-white/85 max-w-[320px] leading-[1.75]">
                 {p.body}
               </p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

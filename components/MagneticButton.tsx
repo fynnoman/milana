@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
+import { m, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
 import { useRef, type ReactNode, type MouseEvent } from "react";
 
 type Props = {
@@ -56,12 +56,12 @@ export default function MagneticButton({
   }[variant];
 
   const content = (
-    <motion.div
+    <m.div
       style={{ x: springX, y: springY }}
       className="inline-block"
     >
       <span className={`${classes} ${className ?? ""}`}>{children}</span>
-    </motion.div>
+    </m.div>
   );
 
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { m, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const services = [
@@ -148,7 +148,7 @@ export default function HorizontalServices() {
             <div className="hidden md:flex items-center gap-4 divider-num">
               <span>Scrollen um zu bewegen</span>
               <span className="relative inline-block h-px w-24 bg-line overflow-hidden">
-                <motion.span
+                <m.span
                   style={{ width: progressBar }}
                   className="absolute inset-y-0 left-0 bg-petrol"
                 />
@@ -158,7 +158,7 @@ export default function HorizontalServices() {
         </div>
 
         <div className="relative flex-1 overflow-hidden">
-          <motion.div
+          <m.div
             ref={railRef}
             style={{ x }}
             className="flex h-full items-center gap-8 pl-6 pr-[10vw] sm:pl-10 will-change-transform"
@@ -166,7 +166,7 @@ export default function HorizontalServices() {
             {services.map((s, i) => (
               <ServiceCard key={s.n} {...s} index={i} />
             ))}
-          </motion.div>
+          </m.div>
         </div>
 
         <div className="relative z-10 shrink-0 border-t border-line bg-white/80 backdrop-blur-md">
@@ -182,7 +182,7 @@ export default function HorizontalServices() {
             <div className="md:hidden flex items-center gap-2 divider-num">
               <span>Scrollen</span>
               <span className="relative inline-block h-px w-16 bg-line overflow-hidden">
-                <motion.span
+                <m.span
                   style={{ width: progressBar }}
                   className="absolute inset-y-0 left-0 bg-petrol"
                 />

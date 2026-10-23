@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
 import { easeOut } from "@/lib/motion";
 import type { ReactNode } from "react";
 
@@ -22,7 +22,7 @@ export default function Reveal({
   as = "div",
 }: Props) {
   const shouldReduce = useReducedMotion();
-  const Comp = motion[as] as typeof motion.div;
+  const Comp = m[as] as typeof m.div;
   return (
     <Comp
       className={className}

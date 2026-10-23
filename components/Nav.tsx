@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
+import { m, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
 
 
@@ -24,7 +24,7 @@ export default function Nav() {
 
   return (
     <>
-      <motion.header
+      <m.header
         initial={{ y: -12, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
@@ -90,7 +90,7 @@ export default function Nav() {
             </div>
           </div>
 
-          <motion.div
+          <m.div
             initial={false}
             animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
             transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
@@ -115,9 +115,9 @@ export default function Nav() {
                 Kennenlernen →
               </a>
             </div>
-          </motion.div>
+          </m.div>
         </div>
-      </motion.header>
+      </m.header>
     </>
   );
 }

@@ -55,6 +55,8 @@ body {
   box-shadow:
     0 1px 0 0 rgba(255, 255, 255, 0.9) inset,
     0 20px 60px -30px rgba(33, 66, 103, 0.16);
+  isolation: isolate;
+  transform: translateZ(0);
 }
 
 .glass-deep {
@@ -139,6 +141,26 @@ button:hover .arrow {
   background-size: 8.333% 100%;
   pointer-events: none;
   mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+.gpu {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.gpu-transform {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.gpu-opacity-transform {
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {

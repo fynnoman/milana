@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { m, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const words = [
@@ -75,7 +75,7 @@ function ManifestoOrnament({
   const scale = useTransform(scrollYProgress, [0, 1], [0.85, 1.4]);
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 90]);
   return (
-    <motion.div
+    <m.div
       style={{ scale, rotate }}
       className="pointer-events-none absolute right-[-10vw] bottom-[-14vh] h-[90vh] w-[90vh] opacity-25"
     >
@@ -84,7 +84,7 @@ function ManifestoOrnament({
         <circle cx="400" cy="400" r="300" fill="none" stroke="#6B7A88" strokeDasharray="2 6" strokeWidth="0.6" />
         <circle cx="400" cy="400" r="220" fill="none" stroke="#2F5F96" strokeOpacity="0.4" strokeWidth="0.6" />
       </svg>
-    </motion.div>
+    </m.div>
   );
 }
 
@@ -111,13 +111,13 @@ function Word({
   const y = useTransform(progress, [start, end], shouldReduce ? [0, 0] : [24, 0]);
 
   return (
-    <motion.span
+    <m.span
       style={{ opacity, y }}
       className={`inline-block mr-[0.28em] ${italic ? "italic" : ""} ${
         accent ? "text-petrol" : "text-navy"
       }`}
     >
       {text}
-    </motion.span>
+    </m.span>
   );
 }

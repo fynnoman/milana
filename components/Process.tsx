@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { m, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Reveal from "./Reveal";
 
@@ -55,13 +55,13 @@ export default function Process() {
 
   return (
     <section id="ablauf" ref={ref} className="relative overflow-hidden py-32 sm:py-40 bg-white">
-      <motion.div
+      <m.div
         style={{ x: numberX }}
         aria-hidden
         className="pointer-events-none absolute -top-4 -right-8 select-none font-display italic text-[26vw] leading-[0.85] tracking-tight text-navy/[0.035] whitespace-nowrap"
       >
         Ablauf
-      </motion.div>
+      </m.div>
 
       <div className="relative mx-auto max-w-[1500px] px-6 sm:px-10">
         <Reveal>
@@ -87,7 +87,7 @@ export default function Process() {
 
         <div className="relative mt-24 grid grid-cols-1 gap-24">
           <div className="pointer-events-none absolute left-4 top-0 h-full w-px bg-line sm:left-[calc(30%-1px)]" />
-          <motion.div
+          <m.div
             style={{ scaleY: lineScale }}
             className="pointer-events-none absolute left-4 top-0 h-full w-px origin-top bg-petrol sm:left-[calc(30%-1px)]"
           />

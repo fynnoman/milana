@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import Reveal from "./Reveal";
 import SplitText from "./SplitText";
@@ -93,7 +93,7 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
         >
           {q}
         </span>
-        <motion.span
+        <m.span
           animate={{ rotate: open ? 45 : 0, backgroundColor: open ? "#2F5F96" : "rgba(255,255,255,0)" }}
           transition={{ duration: 0.35, ease: [0.23, 1, 0.32, 1] }}
           className={`ml-auto inline-flex h-11 w-11 items-center justify-center rounded-full border text-lg ${
@@ -102,11 +102,11 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
           aria-hidden
         >
           +
-        </motion.span>
+        </m.span>
       </button>
       <AnimatePresence initial={false}>
         {open && (
-          <motion.div
+          <m.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -116,7 +116,7 @@ function FaqItem({ q, a, index }: { q: string; a: string; index: number }) {
             <div className="pb-8 pl-16 pr-14 max-w-2xl text-[15px] leading-[1.85] text-navy/75">
               {a}
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </li>

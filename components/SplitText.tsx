@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { m, useReducedMotion } from "framer-motion";
+import { useState } from "react";
 
 type Props = {
   text: string;
@@ -22,7 +23,9 @@ export default function SplitText({
   eager = false,
 }: Props) {
   const shouldReduce = useReducedMotion();
+  const [done, setDone] = useState<boolean>(!!shouldReduce);
   const words = text.split(" ");
+  const totalChars = text.replace(/\s/g, "").length;
   let charIndex = 0;
 
   return (
@@ -49,29 +52,38 @@ export default function SplitText({
                 ease: [0.23, 1, 0.32, 1] as [number, number, number, number],
                 delay: delay + wIdx * wordDelay + i * stagger,
               };
+              const style = {
+                transformOrigin: "50% 100%",
+                willChange: done ? "auto" : "transform, opacity",
+                transform: "translate3d(0,0,0)",
+              } as const;
+              const isLast = idx === totalChars - 1;
+              const onComplete = isLast ? () => setDone(true) : undefined;
               return eager ? (
-                <motion.span
+                <m.span
                   key={i}
                   className={`inline-block ${italic ? "italic" : ""}`}
-                  style={{ transformOrigin: "50% 100%" }}
+                  style={style}
                   initial={initial}
                   animate={to}
                   transition={transition}
+                  onAnimationComplete={onComplete}
                 >
                   {ch}
-                </motion.span>
+                </m.span>
               ) : (
-                <motion.span
+                <m.span
                   key={i}
                   className={`inline-block ${italic ? "italic" : ""}`}
-                  style={{ transformOrigin: "50% 100%" }}
+                  style={style}
                   initial={initial}
                   whileInView={to}
                   viewport={{ once: true, margin: "-10% 0px" }}
                   transition={transition}
+                  onAnimationComplete={onComplete}
                 >
                   {ch}
-                </motion.span>
+                </m.span>
               );
             })}
           </span>

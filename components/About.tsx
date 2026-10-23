@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { m, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Reveal from "./Reveal";
 import SplitText from "./SplitText";
@@ -20,12 +20,12 @@ export default function About() {
 
   return (
     <section id="ueber" ref={ref} className="relative overflow-hidden bg-mist py-32 sm:py-40">
-      <motion.div
+      <m.div
         style={{ x: quoteX }}
         className="pointer-events-none absolute -bottom-10 -left-4 select-none font-display italic text-[24vw] leading-none tracking-tight text-navy/[0.04] whitespace-nowrap"
       >
         Milana
-      </motion.div>
+      </m.div>
 
       <div className="relative mx-auto max-w-[1500px] px-6 sm:px-10">
         <Reveal>
@@ -56,7 +56,7 @@ export default function About() {
           <div className="lg:col-span-7 relative">
             <Reveal>
               <div className="relative overflow-hidden rounded-md aspect-[5/6] shadow-card">
-                <motion.div style={{ y: bigImgY, scale: bigImgScale }} className="absolute inset-0">
+                <m.div style={{ y: bigImgY, scale: bigImgScale }} className="absolute inset-0">
                   <Image
                     src="/images/milana-portrait.webp"
                     alt="Porträt Milana Kollmann"
@@ -65,7 +65,7 @@ export default function About() {
                     sizes="(min-width: 1024px) 58vw, 100vw"
                     className="object-cover object-center"
                   />
-                </motion.div>
+                </m.div>
               </div>
             </Reveal>
 

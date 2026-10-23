@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { m, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
 
 const items = [
@@ -28,7 +28,7 @@ export default function Marquee() {
       ref={ref}
       className="relative overflow-hidden border-y border-line bg-white py-16"
     >
-      <motion.div
+      <m.div
         style={{ x }}
         className="flex items-center gap-14 whitespace-nowrap font-display text-navy"
       >
@@ -44,7 +44,7 @@ export default function Marquee() {
             <span className="inline-flex h-3 w-3 shrink-0 rounded-full bg-petrol/25" />
           </span>
         ))}
-      </motion.div>
+      </m.div>
     </section>
   );
 }

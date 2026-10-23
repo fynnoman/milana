@@ -4,7 +4,7 @@ import Image from "next/image";
 import Reveal from "./Reveal";
 import SplitText from "./SplitText";
 import MagneticButton from "./MagneticButton";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { m, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 export default function Contact() {
@@ -24,7 +24,7 @@ export default function Contact() {
       ref={ref}
       className="relative overflow-hidden bg-navy text-white py-32 sm:py-40"
     >
-      <motion.div
+      <m.div
         style={{ scale: bigRingScale, rotate: bigRingRotate }}
         className="pointer-events-none absolute -left-[24vw] -bottom-[24vh] h-[110vh] w-[110vh]"
       >
@@ -33,15 +33,15 @@ export default function Contact() {
           <circle cx="400" cy="400" r="300" fill="none" stroke="#FFFFFF" strokeDasharray="2 6" strokeWidth="0.6" />
           <circle cx="400" cy="400" r="220" fill="none" stroke="#FFFFFF" strokeWidth="0.6" />
         </svg>
-      </motion.div>
+      </m.div>
 
-      <motion.div
+      <m.div
         style={{ x: bgWordX }}
         aria-hidden
         className="pointer-events-none absolute -top-6 -right-4 select-none font-display italic text-[22vw] leading-[0.85] tracking-tight text-white/[0.04] whitespace-nowrap"
       >
         Kennenlernen
-      </motion.div>
+      </m.div>
 
       <div className="relative mx-auto max-w-[1500px] px-6 sm:px-10">
         <Reveal>

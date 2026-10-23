@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import JsonLd from "@/components/JsonLd";
+import MotionProvider from "@/components/MotionProvider";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -90,7 +91,7 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${display.variable} ${sans.variable}`}>
       <body className="font-sans bg-white text-navy antialiased">
-        {children}
+        <MotionProvider>{children}</MotionProvider>
         <JsonLd />
       </body>
     </html>

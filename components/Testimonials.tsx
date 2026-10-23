@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { m, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const promises = [
@@ -137,11 +137,11 @@ function ImageLayer({
   );
 
   return (
-    <motion.div
+    <m.div
       style={{ opacity }}
       className="absolute inset-0 overflow-hidden rounded-md shadow-card"
     >
-      <motion.div style={{ scale }} className="absolute inset-0">
+      <m.div style={{ scale }} className="absolute inset-0">
         <Image
           src={src}
           alt={alt}
@@ -150,8 +150,8 @@ function ImageLayer({
           sizes="(min-width: 1024px) 50vw, 100vw"
           className="object-cover object-center"
         />
-      </motion.div>
-    </motion.div>
+      </m.div>
+    </m.div>
   );
 }
 
@@ -185,7 +185,7 @@ function PromiseLayer({
   );
 
   return (
-    <motion.article
+    <m.article
       style={{ opacity, y }}
       className="absolute inset-0 flex flex-col justify-center"
     >
@@ -202,7 +202,7 @@ function PromiseLayer({
       <p className="text-[15px] leading-[1.85] text-navy/75 max-w-xl">
         {promise.body}
       </p>
-    </motion.article>
+    </m.article>
   );
 }
 
@@ -227,7 +227,7 @@ function ProgressDot({
     <div className="flex items-center gap-3">
       <span className="text-[11px] tabular-nums tracking-[0.14em] text-navy/60">{label}</span>
       <div className="relative h-px w-16 bg-line overflow-hidden">
-        <motion.div style={{ width: w }} className="absolute inset-y-0 left-0 bg-petrol" />
+        <m.div style={{ width: w }} className="absolute inset-y-0 left-0 bg-petrol" />
       </div>
     </div>
   );

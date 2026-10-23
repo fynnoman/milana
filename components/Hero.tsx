@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
+import { m, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import SplitText from "./SplitText";
 import MagneticButton from "./MagneticButton";
@@ -32,14 +32,17 @@ export default function Hero() {
       className="relative min-h-[100svh] overflow-hidden bg-white"
     >
       {/* Vollflächiges Bild rechts */}
-      <motion.div
-        style={{ y: photoY }}
+      <m.div
+        style={{ y: photoY, willChange: "transform, clip-path" }}
         initial={{ clipPath: "inset(100% 0 0 0)" }}
         animate={{ clipPath: "inset(0% 0 0 0)" }}
         transition={{ duration: 1.6, ease: [0.77, 0, 0.175, 1], delay: 0.15 }}
-        className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[58%] overflow-hidden"
+        className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[58%] overflow-hidden gpu"
       >
-        <motion.div style={{ scale: photoScale }} className="absolute inset-0">
+        <m.div
+          style={{ scale: photoScale, willChange: "transform" }}
+          className="absolute inset-0 gpu"
+        >
           <Image
             src="/images/milana-hero.webp"
             alt="Milana Kollmann am Schreibtisch im Telefonat"
@@ -49,22 +52,23 @@ export default function Hero() {
             sizes="(min-width: 1024px) 58vw, 100vw"
             className="object-cover object-center"
           />
-        </motion.div>
+        </m.div>
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/75 to-white/10 lg:via-white/60" />
         <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-navy/10 mix-blend-multiply" />
-      </motion.div>
+      </m.div>
 
       {/* Weiches Ambient-Licht */}
       <div className="pointer-events-none absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full bg-mist blur-3xl" />
       <div className="pointer-events-none absolute -bottom-40 left-1/2 h-[520px] w-[520px] rounded-full bg-petrol/10 blur-3xl" />
 
       {/* RUNDES LOGO oben rechts in der Ecke */}
-      <motion.div
+      <m.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 0.4, ease: [0.23, 1, 0.32, 1] }}
-        className="hidden sm:block absolute top-24 right-6 sm:top-28 sm:right-10 z-20 w-[130px] sm:w-[160px] aspect-square overflow-hidden rounded-full ring-1 ring-line bg-white shadow-card"
+        style={{ willChange: "transform, opacity" }}
+        className="hidden sm:block absolute top-24 right-6 sm:top-28 sm:right-10 z-20 w-[130px] sm:w-[160px] aspect-square overflow-hidden rounded-full ring-1 ring-line bg-white shadow-card gpu"
       >
         <Image
           src="/logo.webp"
@@ -75,12 +79,12 @@ export default function Hero() {
           sizes="(min-width: 640px) 160px, 130px"
           className="h-full w-full object-cover select-none"
         />
-      </motion.div>
+      </m.div>
 
       {/* CONTENT-BLOCK: Chip + Eyebrow + Heading + Copy + Buttons + Pillars (alles links) */}
-      <motion.div
-        style={{ y: contentY }}
-        className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1500px] flex-col px-6 sm:px-10 pt-28 pb-16"
+      <m.div
+        style={{ y: contentY, willChange: "transform" }}
+        className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1500px] flex-col px-6 sm:px-10 pt-28 pb-16 gpu"
       >
         <div className="flex flex-col max-w-[92%] lg:max-w-[78%]">
           <h1 className="font-display leading-[1.25] tracking-[-0.025em] text-navy">
@@ -105,13 +109,13 @@ export default function Hero() {
           </div>
 
           {/* Signatur */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.6 }}
             className="mt-10 flex items-center gap-5"
           >
-            <motion.span
+            <m.span
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
               transition={{ duration: 1.4, delay: 1.6, ease: [0.77, 0, 0.175, 1] }}
@@ -120,9 +124,9 @@ export default function Hero() {
             <span className="font-display italic text-[22px] text-navy/85">
               Milana Kollmann
             </span>
-          </motion.div>
+          </m.div>
 
-          <motion.p
+          <m.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 1.75, ease: [0.23, 1, 0.32, 1] }}
@@ -132,16 +136,16 @@ export default function Hero() {
             rund um die Abrechnung. GOZ, BEMA, HKP, Reklamationen. In Ruhe,
             mit Blick fürs Detail und immer als feste Ansprechpartnerin.
             Sie behandeln Ihre Patienten. Ich kümmere mich um die Zahlen.
-          </motion.p>
+          </m.p>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.9, delay: 1.9 }}
             className="mt-7 flex flex-wrap gap-2 max-w-lg"
           >
             {serviceTags.map((t, i) => (
-              <motion.span
+              <m.span
                 key={t}
                 initial={{ opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -149,11 +153,11 @@ export default function Hero() {
                 className="rounded-full border border-petrol/30 bg-white/70 backdrop-blur px-3.5 py-1.5 text-[11px] tracking-[0.14em] uppercase text-navy/80"
               >
                 {t}
-              </motion.span>
+              </m.span>
             ))}
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 2.1, ease: [0.23, 1, 0.32, 1] }}
@@ -165,11 +169,11 @@ export default function Hero() {
             <MagneticButton href="#leistungen" variant="ghost">
               Leistungen ansehen <span className="arrow">→</span>
             </MagneticButton>
-          </motion.div>
+          </m.div>
         </div>
 
         {/* Fußzeile: drei Pillars */}
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 2.3, ease: [0.23, 1, 0.32, 1] }}
@@ -192,8 +196,8 @@ export default function Hero() {
               </div>
             ))}
           </div>
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
     </section>
   );
 }
