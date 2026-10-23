@@ -10,7 +10,6 @@ const serviceTags = [
   "KZV",
   "HKP",
   "Reklamationen",
-  "Praxisberatung",
 ];
 
 export default function Hero() {

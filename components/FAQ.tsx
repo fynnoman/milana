@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "Wo sitzen Sie und arbeiten Sie auch mit weiter entfernten Praxen?",
-    a: "Ich sitze in Saarlouis und arbeite mit Praxen deutschlandweit digital zusammen. Für ein persönliches Kennenlernen oder eine Team-Schulung komme ich gerne zu Ihnen in die Praxis.",
+    a: "Ich sitze in Saarlouis und arbeite mit Praxen deutschlandweit digital zusammen. Für ein persönliches Kennenlernen komme ich gerne zu Ihnen in die Praxis.",
   },
 ];
 

@@ -23,7 +23,7 @@ export default function ScaleReveal() {
         <p className="mt-8 max-w-xl text-white/85 text-[15px] leading-[1.75]">
           Im Praxisalltag geht schnell etwas unter. Eine Analogposition,
           eine Materialkosten-Zeile, eine Nachbegründung. Ich schaue mir
-          jede Position an, mit Ruhe und in Ihrem Namen.
+          jede Position an, mit Ruhe.
         </p>
         <div className="mt-10 flex items-center gap-4 text-white/70 text-[11px] uppercase tracking-[0.22em]">
           <span className="h-px w-10 bg-white/40" />

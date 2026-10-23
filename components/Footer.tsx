@@ -31,7 +31,6 @@ export default function Footer() {
               <li><a href="#leistungen" className="hover:text-petrol transition-colors">HKP-Erstellung</a></li>
               <li><a href="#leistungen" className="hover:text-petrol transition-colors">Reklamationen</a></li>
               <li><a href="#leistungen" className="hover:text-petrol transition-colors">Praxisberatung</a></li>
-              <li><a href="#leistungen" className="hover:text-petrol transition-colors">Team-Schulung</a></li>
             </ul>
           </div>
 

@@ -43,20 +43,11 @@ const services = [
   {
     n: "05",
     title: "Praxisberatung",
-    lead: "Prozesse · Software · Team",
+    lead: "Prozesse · Abläufe · Übergaben",
     body:
-      "Wir schauen gemeinsam auf Ihre Abrechnungsabläufe, Software und Übergaben zwischen Behandlung, Assistenz und Verwaltung. Ohne Beraterjargon, mit konkreten Vorschlägen.",
-    points: ["Prozess-Sichtung", "Software-Auswahl", "Klare Schnittstellen"],
+      "Wir schauen gemeinsam auf Ihre Abrechnungsabläufe und die Übergaben zwischen Behandlung, Assistenz und Verwaltung. Ohne Beraterjargon, mit konkreten Vorschlägen.",
+    points: ["Prozess-Sichtung", "Klare Schnittstellen", "Ruhige Umsetzung"],
     accent: "Nah an der Praxis",
-  },
-  {
-    n: "06",
-    title: "Team-Schulung",
-    lead: "Fortbildung für Ihr Team",
-    body:
-      "Kompakte Einheiten und Sprechstunden für Verwaltung und ZFAs. GOZ, BEMA, HKP, gemeinsame Fallbesprechungen. Auf Wunsch bei Ihnen vor Ort oder als regelmäßige Praxisstunde.",
-    points: ["GOZ-Kompaktkurs", "BEMA für Einsteiger", "Regelmäßige Sprechstunde"],
-    accent: "Wissen weitergeben",
   },
 ];
 
@@ -104,7 +95,7 @@ export default function HorizontalServices() {
             Leistungen
           </div>
           <h2 className="font-display mt-4 text-[clamp(28px,7vw,44px)] leading-[1.02] text-navy max-w-2xl">
-            Sechs Bausteine.
+            Fünf Bausteine.
             <span className="italic text-petrol"> Ein Ergebnis.</span>
           </h2>
 
@@ -135,7 +126,7 @@ export default function HorizontalServices() {
       </section>
 
       {/* DESKTOP: Horizontales Scroll-Rail */}
-      <section ref={outerRef} className="relative hidden h-[520vh] bg-white md:block">
+      <section ref={outerRef} className="relative hidden h-[440vh] bg-white md:block">
       <div className="sticky top-0 flex h-screen w-full flex-col overflow-hidden">
         <div className="relative z-10 shrink-0 border-b border-line bg-white/80 backdrop-blur-md">
           <div className="mx-auto flex max-w-[1500px] flex-wrap items-end justify-between gap-4 px-6 sm:px-10 pt-24 pb-6">
@@ -145,7 +136,7 @@ export default function HorizontalServices() {
                 Leistungen
               </div>
               <h2 className="font-display mt-4 text-[clamp(28px,4.2vw,56px)] leading-[1.02] text-navy max-w-2xl">
-                Sechs Bausteine.
+                Fünf Bausteine.
                 <span className="italic text-petrol"> Ein Ergebnis.</span>
               </h2>
             </div>
