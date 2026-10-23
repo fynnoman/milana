@@ -21,7 +21,7 @@ const pillars = [
     k: "Zuverlässig",
     lead: "Feste Turnusse und klare Zusagen",
     body:
-      "Verbindliche Abrechnungstage, klare Ansprechzeiten und ein kurzes Monatsbild. Sie wissen jederzeit, wo Ihre Abrechnung steht.",
+      "Monats- oder Quartalsabrechnung nach Ihrem Wunsch, dazu wöchentliche Reports zu Honorar, Rückläufern und offenen HKPs. Sie wissen jederzeit, wo Ihre Abrechnung steht.",
   },
 ];
 

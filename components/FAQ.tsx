@@ -9,7 +9,19 @@ import MagneticButton from "./MagneticButton";
 const faqs = [
   {
     q: "Wie läuft die Zusammenarbeit ab?",
-    a: "Nach dem Kennenlernen bekommen Sie ein Angebot mit klarem Umfang und festem Startdatum. Sobald wir uns einig sind, richte ich einen abrechnungsseitigen Zugang zu Ihrer Praxissoftware ein. Sie behalten die Hoheit über Ihre Praxis. Ich arbeite im Hintergrund, mit festen Abrechnungstagen pro Woche und einem kurzen Monatsbild.",
+    a: "Nach dem Kennenlernen bekommen Sie ein Angebot mit klarem Umfang und festem Startdatum. Sobald wir uns einig sind, richte ich einen abrechnungsseitigen Zugang zu Ihrer Praxissoftware ein. Sie behalten die Hoheit über Ihre Praxis. Ich arbeite im Hintergrund und rechne je nach Wunsch monatlich oder quartalsweise ab, mit einem kurzen Statusbild dazu.",
+  },
+  {
+    q: "Arbeiten Sie remote als externe ZMV?",
+    a: "Ja. Ich übernehme die Abrechnung komplett remote in Ihrer Praxissoftware. Sie geben Arbeit ab und behalten die Kontrolle. Zahnarztpraxis-Inhaber und ZMV-Teams, die Entlastung brauchen, bekommen eine feste Ansprechpartnerin ohne zusätzlichen Arbeitsplatz vor Ort.",
+  },
+  {
+    q: "Welche Reports bekomme ich?",
+    a: "Wöchentlich einen kompakten, leicht verständlichen Report. Darin stehen Honorar, Rückläufer, offene Heil- und Kostenpläne und kritische GOZ-Ziffern. So wissen Sie jederzeit, wo Ihre Abrechnung steht, ohne selbst suchen zu müssen.",
+  },
+  {
+    q: "Was ändert sich in den ersten vier Wochen?",
+    a: "In den ersten vier Wochen sehen Sie typischerweise weniger Rückläufer, klarere Zahlen durch den wöchentlichen Report, eine stabilere Liquidität durch regelmäßige Abrechnung und eine nachvollziehbare Dokumentation jeder erbrachten Leistung.",
   },
   {
     q: "Mit welchen Praxissoftwares arbeiten Sie?",
@@ -18,6 +30,10 @@ const faqs = [
   {
     q: "Wie halten Sie es mit Datenschutz und Diskretion?",
     a: "Ich arbeite ausschließlich über verschlüsselte Zugänge, unterzeichne eine Vereinbarung zur Auftragsverarbeitung nach Art. 28 DSGVO und behandle Praxis- und Patientendaten vertraulich. Auf Wunsch besprechen wir das Sicherheitskonzept vorab in Ruhe.",
+  },
+  {
+    q: "In welchem Rhythmus rechnen Sie ab?",
+    a: "So wie es für Ihre Praxis passt. Je nach Wunsch rechne ich monatlich oder quartalsweise ab. Den Turnus legen wir im Erstgespräch gemeinsam fest und passen ihn an, falls sich Ihr Alltag ändert.",
   },
   {
     q: "Was kostet Ihre Unterstützung?",

@@ -3,7 +3,19 @@ import { SITE, SERVICES } from "@/lib/site";
 const FAQS = [
   {
     q: "Wie läuft die Zusammenarbeit ab?",
-    a: "Nach dem Kennenlernen bekommen Sie ein Angebot mit klarem Umfang und festem Startdatum. Sobald wir uns einig sind, richte ich einen abrechnungsseitigen Zugang zu Ihrer Praxissoftware ein. Sie behalten die Hoheit über Ihre Praxis. Ich arbeite im Hintergrund, mit festen Abrechnungstagen pro Woche und einem kurzen Monatsbild.",
+    a: "Nach dem Kennenlernen bekommen Sie ein Angebot mit klarem Umfang und festem Startdatum. Sobald wir uns einig sind, richte ich einen abrechnungsseitigen Zugang zu Ihrer Praxissoftware ein. Sie behalten die Hoheit über Ihre Praxis. Ich arbeite im Hintergrund und rechne je nach Wunsch monatlich oder quartalsweise ab, mit einem kurzen Statusbild dazu.",
+  },
+  {
+    q: "Arbeiten Sie remote als externe ZMV?",
+    a: "Ja, ich übernehme die Abrechnung komplett remote in Ihrer Praxissoftware. Sie geben Arbeit ab und behalten die Kontrolle. Zielgruppe sind Zahnarztpraxis-Inhaber und ZMV-Teams, die Entlastung ohne zusätzlichen Arbeitsplatz vor Ort brauchen.",
+  },
+  {
+    q: "Welche Reports bekomme ich?",
+    a: "Wöchentlich einen kompakten, leicht verständlichen Report zu Honorar, Rückläufern, offenen Heil- und Kostenplänen und kritischen GOZ-Ziffern.",
+  },
+  {
+    q: "Was ändert sich in den ersten vier Wochen?",
+    a: "In den ersten vier Wochen sehen Sie typischerweise weniger Rückläufer, klarere Zahlen durch den wöchentlichen Report, eine stabilere Liquidität durch regelmäßige Abrechnung und eine nachvollziehbare Dokumentation jeder erbrachten Leistung.",
   },
   {
     q: "Mit welchen Praxissoftwares arbeiten Sie?",
@@ -12,6 +24,10 @@ const FAQS = [
   {
     q: "Wie halten Sie es mit Datenschutz und Diskretion?",
     a: "Ich arbeite ausschließlich über verschlüsselte Zugänge, unterzeichne eine Vereinbarung zur Auftragsverarbeitung nach Art. 28 DSGVO und behandle Praxis- und Patientendaten vertraulich.",
+  },
+  {
+    q: "In welchem Rhythmus rechnen Sie ab?",
+    a: "Je nach Wunsch monatlich oder quartalsweise. Den Turnus legen wir im Erstgespräch gemeinsam fest und passen ihn an, wenn sich der Praxisalltag ändert.",
   },
   {
     q: "Was kostet Ihre Unterstützung?",

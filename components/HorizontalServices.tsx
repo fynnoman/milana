@@ -10,8 +10,8 @@ const services = [
     title: "Privatabrechnung",
     lead: "GOZ · GOÄ · BEB · BEL II",
     body:
-      "Ich sichte jede Position, formuliere Begründungen sauber aus und nehme Analogpositionen sowie Materialkosten mit auf. Nichts wird pauschal abgehakt und nichts geht unter.",
-    points: ["GOZ inklusive §2-Begründungen", "Analog- und Verlangensleistungen", "Fremd- und Eigenlabor"],
+      "Ich prüfe jede Position, formuliere Begründungen sauber aus und nehme Analogpositionen, Materialkosten und das Eigenlabor nach BEL und BEB mit auf. Nichts wird pauschal abgehakt.",
+    points: ["GOZ inklusive §2-Begründungen", "Eigenlabor nach BEB und BEL II", "Monats- oder Quartalsabrechnung"],
     accent: "Kernstück",
   },
   {
@@ -20,18 +20,18 @@ const services = [
     title: "KZV-Abrechnung",
     lead: "BEMA · Quartalsabschluss · Gutachten",
     body:
-      "Quartalsweise BEMA-Abrechnung inklusive PAR, ZE und KBR. Bei Gutachten bereite ich die Unterlagen sorgfältig auf und begleite den Vorgang bis zur Klärung.",
-    points: ["PAR- und ZE-Abrechnung", "Gutachten-Dossiers", "Begleitung im Widerspruch"],
+      "BEMA-Abrechnung inklusive PAR, ZE und KBR. Gutachten-Dossiers bereite ich sorgfältig auf, bei Wirtschaftlichkeitsprüfungen stehe ich an Ihrer Seite.",
+    points: ["PAR- und ZE-Abrechnung", "Gutachten-Dossiers", "Wirtschaftlichkeitsprüfung"],
     accent: "Vertragszahnärztlich",
   },
   {
     n: "03",
     slug: "hkp",
     title: "HKP-Erstellung",
-    lead: "Heil- und Kostenpläne",
+    lead: "Heil- und Kostenpläne · Kostenvoranschläge",
     body:
-      "Ich prüfe, erstelle und überarbeite Heil- und Kostenpläne für ZE, PAR, KFO und KBR. Auf Wunsch inklusive Alternativplänen und leicht verständlicher Patientenerklärung.",
-    points: ["Alternativpläne", "Vor- und Gegenrechnung", "Klare Patientenkommunikation"],
+      "Ich prüfe, erstelle und überarbeite Heil- und Kostenpläne sowie Kostenvoranschläge für ZE, PAR, KFO und KBR. Auf Wunsch inklusive Alternativplänen und leicht verständlicher Patientenerklärung.",
+    points: ["Heil- und Kostenpläne", "Kostenvoranschläge", "Klare Patientenkommunikation"],
     accent: "Planungssicher",
   },
   {
@@ -48,10 +48,10 @@ const services = [
     n: "05",
     slug: "praxisberatung",
     title: "Praxisberatung",
-    lead: "Prozesse · Abläufe · Übergaben",
+    lead: "Leistungserfassung · Dokumentation · Prozesse",
     body:
-      "Wir schauen gemeinsam auf Ihre Abrechnungsabläufe und die Übergaben zwischen Behandlung, Assistenz und Verwaltung. Ohne Beraterjargon, mit konkreten Vorschlägen.",
-    points: ["Prozess-Sichtung", "Klare Schnittstellen", "Ruhige Umsetzung"],
+      "Ich kontrolliere Leistungserfassung und Dokumentation, schaue auf Ihre Abrechnungsabläufe und die Übergaben zwischen Behandlung, Assistenz und Verwaltung.",
+    points: ["Kontrolle der Leistungserfassung", "Prüfung der Dokumentation", "Klare Schnittstellen"],
     accent: "Nah an der Praxis",
   },
 ];

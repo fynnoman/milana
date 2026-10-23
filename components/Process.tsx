@@ -10,9 +10,9 @@ const steps = [
     title: "Kennenlernen",
     subtitle: "Verstehen",
     body:
-      "Ein ruhiges Erstgespräch am Telefon oder per Video. Sie erzählen mir von Ihrer Praxis, Ihrer Software und Ihren offenen Punkten. Danach spüren wir beide, ob die Chemie stimmt.",
+      "Ein ruhiges Erstgespräch persönlich oder per Video-Call. Sie erzählen mir von Ihrer Praxis, Ihrer Software und Ihren offenen Punkten. Danach spüren wir beide, ob die Chemie stimmt.",
     time: "Etwa 30 Minuten",
-    detail: ["Vorbesprechung", "Ist-Analyse", "Chemie-Check"],
+    detail: ["Persönlich oder Video-Call", "Ist-Analyse", "Chemie-Check"],
   },
   {
     n: "02",
@@ -37,9 +37,9 @@ const steps = [
     title: "Laufende Betreuung",
     subtitle: "Führen",
     body:
-      "Feste Abrechnungstage pro Woche, klare Ansprechzeiten, ein kurzes Monatsbild. Sie wissen jederzeit, wo wir stehen und was in Arbeit ist. Ruhig, verlässlich, planbar.",
+      "Je nach Wunsch rechne ich monatlich oder quartalsweise ab, remote und direkt in Ihrer Praxissoftware. Dazu bekommen Sie wöchentliche, leicht verständliche Reports zu Honorar, Rückläufern, offenen HKPs und kritischen GOZ-Ziffern. Sie geben Arbeit ab und behalten die Kontrolle.",
     time: "Ab sofort",
-    detail: ["Feste Turnusse", "Monatsbild", "Direkte Leitung"],
+    detail: ["Monatlich oder quartalsweise", "Wöchentliche Reports", "Remote in Ihrer Software"],
   },
 ];
 

@@ -45,11 +45,13 @@ export const SERVICES = [
     short: "Privatabrechnung",
     lead: "GOZ · GOÄ · BEB · BEL II",
     intro:
-      "Externe Privatabrechnung für Zahnarztpraxen. Jede Position wird gesichtet, §2-Begründungen werden sauber ausformuliert, Analogpositionen und Materialkosten mitgenommen. Nichts wird pauschal abgehakt und nichts geht unter.",
+      "Externe Privatabrechnung für Zahnarztpraxen, remote in Ihrer Praxissoftware. Jede Position wird geprüft, §2-Begründungen werden sauber ausformuliert, Analogpositionen, Materialkosten und das Eigenlabor nach BEL und BEB werden mitgenommen. Monats- oder Quartalsabrechnung nach Ihrem Wunsch.",
     points: [
       "GOZ inklusive §2-Begründungen",
       "Analog- und Verlangensleistungen",
       "Fremd- und Eigenlabor nach BEB und BEL II",
+      "Prüfung jeder Position",
+      "Monats- oder Quartalsabrechnung",
     ],
     accent: "Kernstück",
   },
@@ -60,11 +62,12 @@ export const SERVICES = [
     short: "KZV",
     lead: "BEMA · Quartalsabschluss · Gutachten",
     intro:
-      "Quartalsweise BEMA-Abrechnung für Vertragszahnarztpraxen, inklusive PAR, ZE und KBR. Bei Gutachten bereite ich die Unterlagen sorgfältig auf und begleite den Vorgang bis zur Klärung.",
+      "BEMA-Abrechnung für Vertragszahnarztpraxen, inklusive PAR, ZE und KBR. Bei Gutachten bereite ich die Unterlagen sorgfältig auf und begleite den Vorgang bis zur Klärung. Bei Wirtschaftlichkeitsprüfungen stehe ich an Ihrer Seite.",
     points: [
       "PAR- und ZE-Abrechnung",
       "Gutachten-Dossiers vorbereiten",
       "Begleitung im Widerspruchsverfahren",
+      "Unterstützung bei Wirtschaftlichkeitsprüfung",
     ],
     accent: "Vertragszahnärztlich",
   },
@@ -73,12 +76,13 @@ export const SERVICES = [
     n: "03",
     title: "HKP-Erstellung",
     short: "HKP",
-    lead: "Heil- und Kostenpläne",
+    lead: "Heil- und Kostenpläne · Kostenvoranschläge",
     intro:
-      "Prüfung, Erstellung und Überarbeitung von Heil- und Kostenplänen für ZE, PAR, KFO und KBR. Auf Wunsch inklusive Alternativplänen und einer verständlichen Patientenerklärung.",
+      "Prüfung, Erstellung und Überarbeitung von Heil- und Kostenplänen sowie Kostenvoranschlägen für ZE, PAR, KFO und KBR. Auf Wunsch inklusive Alternativplänen und einer verständlichen Patientenerklärung.",
     points: [
+      "Heil- und Kostenpläne",
+      "Kostenvoranschläge",
       "Alternativpläne für Patient:innen",
-      "Vor- und Gegenrechnung",
       "Klare Patientenkommunikation",
     ],
     accent: "Planungssicher",
@@ -103,10 +107,11 @@ export const SERVICES = [
     n: "05",
     title: "Praxisberatung",
     short: "Praxisberatung",
-    lead: "Prozesse · Abläufe · Übergaben",
+    lead: "Prozesse · Leistungserfassung · Dokumentation",
     intro:
-      "Gemeinsamer Blick auf Ihre Abrechnungsabläufe und die Übergaben zwischen Behandlung, Assistenz und Verwaltung. Ohne Beraterjargon, mit konkreten Vorschlägen.",
+      "Gemeinsamer Blick auf Ihre Abrechnungsabläufe und die Übergaben zwischen Behandlung, Assistenz und Verwaltung. Ich kontrolliere die Leistungserfassung und Dokumentation, damit jede erbrachte Leistung sauber bei der Abrechnung ankommt.",
     points: [
+      "Kontrolle der Leistungserfassung und Dokumentation",
       "Prozess-Sichtung im Abrechnungsablauf",
       "Klare Schnittstellen zwischen den Rollen",
       "Ruhige Umsetzung Schritt für Schritt",

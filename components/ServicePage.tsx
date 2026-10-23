@@ -83,8 +83,9 @@ export default function ServicePage({ service }: Props) {
               Nach einem kurzen Kennenlernen bekommen Sie ein Angebot mit
               klarem Umfang und festem Startdatum. Danach richte ich einen
               abrechnungsseitigen Zugang zu Ihrer Praxissoftware ein. Sie
-              behalten die Hoheit über Ihre Praxis, ich arbeite im Hintergrund
-              mit festen Abrechnungstagen pro Woche und einem kurzen Monatsbild.
+              behalten die Hoheit über Ihre Praxis, ich arbeite im Hintergrund.
+              Abgerechnet wird je nach Ihrem Wunsch monatlich oder
+              quartalsweise, mit einem kurzen Monats- oder Quartalsbild dazu.
             </p>
             <p>
               Für diese Leistung nutze ich die gängigen Praxissoftwares,

@@ -121,14 +121,16 @@ export default function About() {
               <div className="hairline my-12" />
               <p className="text-[16px] leading-[1.85] text-navy/80">
                 Mein Weg führte über die zahnmedizinische Praxis in die
-                Abrechnung. Heute unterstütze ich Praxen von Saarlouis aus.
-                Digital, ruhig, und immer als feste Ansprechpartnerin, die
-                Ihre Praxis kennt.
+                Abrechnung. Heute unterstütze ich Praxen von Saarlouis aus
+                als externe ZMV. Digital, remote in Ihrer Praxissoftware und
+                immer als feste Ansprechpartnerin, die Ihre Praxis kennt.
               </p>
               <p className="mt-6 text-[15px] leading-[1.85] text-navy/70">
                 Ich arbeite nicht mit Standardpaketen. Wir schauen gemeinsam,
-                was Ihre Praxis braucht. Sie behalten die Hoheit über alles,
-                ich übernehme das, was ich für Sie am besten kann.
+                was Ihre Praxis braucht. Jede Position wird geprüft, dazu
+                bekommen Sie wöchentliche Reports zu Honorar, Rückläufern,
+                offenen HKPs und kritischen GOZ-Ziffern. Sie geben Arbeit ab
+                und behalten die Kontrolle.
               </p>
             </Reveal>
 
@@ -157,6 +159,32 @@ export default function About() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.25}>
+              <div className="mt-16">
+                <div className="eyebrow !text-navy/60 flex items-center gap-3">
+                  <span className="h-px w-8 bg-petrol/60" />
+                  Nach vier Wochen
+                </div>
+                <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-6">
+                  {[
+                    { k: "Weniger Rückläufer", label: "Begründungen tragen von Anfang an." },
+                    { k: "Klare Zahlen", label: "Wöchentlicher Report, kein Rätselraten." },
+                    { k: "Stabile Liquidität", label: "Regelmäßige Abrechnung, planbarer Zahlungseingang." },
+                    { k: "Nachvollziehbar", label: "Jede Leistung sauber dokumentiert und abgerechnet." },
+                  ].map((it) => (
+                    <div key={it.k} className="border-t border-line pt-4">
+                      <div className="font-display italic text-[20px] leading-tight text-petrol">
+                        {it.k}
+                      </div>
+                      <div className="mt-2 text-[13px] tracking-[0.02em] text-navy/70 leading-[1.55]">
+                        {it.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </Reveal>
 
