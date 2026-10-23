@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import MagneticButton from "@/components/MagneticButton";
 import { SERVICES, SITE, type Service } from "@/lib/site";
 
 type Props = { service: Service };
@@ -58,12 +57,9 @@ export default function ServicePage({ service }: Props) {
           </ul>
 
           <div className="mt-14 flex flex-wrap gap-4">
-            <MagneticButton href="tel:+491742122526" variant="primary">
-              Jetzt anrufen <span className="arrow">→</span>
-            </MagneticButton>
-            <MagneticButton href="mailto:info@mb-zahnabrechnung.de" variant="outline">
-              E-Mail schreiben <span className="arrow">→</span>
-            </MagneticButton>
+            <span className="text-navy/60 text-[13px]">
+              Kontaktdaten folgen in Kürze.
+            </span>
           </div>
         </div>
       </section>
@@ -153,15 +149,9 @@ export default function ServicePage({ service }: Props) {
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
-            <MagneticButton href="tel:+491742122526" variant="primary">
-              Jetzt anrufen <span className="arrow">→</span>
-            </MagneticButton>
-            <a
-              href="mailto:info@mb-zahnabrechnung.de"
-              className="inline-flex items-center gap-3 px-8 py-4 border border-white/40 text-white rounded-sm uppercase tracking-[0.14em] text-[12px] font-medium hover:bg-white hover:text-navy transition-colors"
-            >
-              E-Mail schreiben <span className="arrow">→</span>
-            </a>
+            <span className="text-white/70 text-[13px]">
+              Kontaktdaten folgen in Kürze.
+            </span>
           </div>
         </div>
       </section>

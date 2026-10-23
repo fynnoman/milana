@@ -28,40 +28,24 @@ export default function ImpressumPage() {
             <div>
               <div className="eyebrow !text-navy/60 mb-3">Angaben nach § 5 TMG</div>
               <p className="text-navy font-medium">{SITE.legalName}</p>
-              <p>{SITE.address.streetAddress}</p>
-              <p>
-                {SITE.address.postalCode} {SITE.address.addressLocality}
-              </p>
-              <p>Deutschland</p>
+              <p>Anschrift wird in Kürze ergänzt.</p>
             </div>
 
             <div>
               <div className="eyebrow !text-navy/60 mb-3">Kontakt</div>
-              <p>
-                Telefon:{" "}
-                <a className="text-petrol hover:text-navy transition-colors" href={SITE.contact.phoneHref}>
-                  {SITE.contact.phone}
-                </a>
-              </p>
-              <p>
-                E-Mail:{" "}
-                <a className="text-petrol hover:text-navy transition-colors" href={SITE.contact.emailHref}>
-                  {SITE.contact.email}
-                </a>
-              </p>
+              <p>Kontaktdaten folgen in Kürze.</p>
             </div>
 
             <div>
               <div className="eyebrow !text-navy/60 mb-3">Verantwortlich für den Inhalt</div>
               <p>{SITE.owner.name}</p>
-              <p>Anschrift wie oben.</p>
             </div>
 
             <div className="text-navy/60 text-[13px] space-y-3">
               <p>
-                Weitere pflichtige Angaben (Umsatzsteuer-ID, Berufshaftpflicht,
-                berufsrechtliche Regelungen) werden ergänzt, sobald sie
-                vorliegen.
+                Weitere pflichtige Angaben (Anschrift, Kontakt, Umsatzsteuer-ID,
+                Berufshaftpflicht, berufsrechtliche Regelungen) werden ergänzt,
+                sobald sie vorliegen.
               </p>
               <p>
                 Trotz sorgfältiger inhaltlicher Kontrolle wird keine Haftung

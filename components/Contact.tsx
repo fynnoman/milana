@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
 import SplitText from "./SplitText";
-import MagneticButton from "./MagneticButton";
 import { m, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
@@ -69,10 +68,8 @@ export default function Contact() {
         <div className="mt-24 grid gap-16 lg:grid-cols-12">
           <Reveal className="lg:col-span-6">
             <div className="space-y-10">
-              <ContactRow label="Telefon" value="+49 174 212 25 26" href="tel:+491742122526" />
-              <ContactRow label="E-Mail" value="info@mb-zahnabrechnung.de" href="mailto:info@mb-zahnabrechnung.de" />
               <ContactRow label="Standort" value="Saarland" />
-              <ContactRow label="Anfragen" value="Am liebsten kurz anrufen. Ich melde mich zurück, wenn ich gerade nicht drangehen kann." />
+              <ContactRow label="Anfragen" value="Kontaktdaten folgen in Kürze." />
             </div>
 
             <div className="mt-14 flex items-center gap-4 rounded-md glass-deep px-5 py-4 w-fit">
@@ -111,11 +108,8 @@ export default function Contact() {
                 </p>
               </div>
 
-              <div className="mt-12 flex flex-wrap items-center gap-4">
-                <MagneticButton href="tel:+491742122526" variant="primary">
-                  Jetzt anrufen <span className="arrow">→</span>
-                </MagneticButton>
-              </div>
+              <div className="mt-12 flex flex-wrap items-center gap-4" />
+
             </div>
           </Reveal>
         </div>
