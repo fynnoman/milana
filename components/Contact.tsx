@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Reveal from "./Reveal";
 import SplitText from "./SplitText";
 import MagneticButton from "./MagneticButton";
@@ -74,21 +73,10 @@ export default function Contact() {
               <ContactRow label="Anfragen" value="Am liebsten kurz anrufen. Ich melde mich zurück, wenn ich gerade nicht drangehen kann." />
             </div>
 
-            <div className="mt-14 flex items-center gap-4 rounded-md glass-deep px-5 py-4 w-fit">
-              <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full ring-1 ring-white/30 bg-white/10">
-                <Image
-                  src="/images/milana-call.webp"
-                  alt="Milana Kollmann"
-                  fill
-                  sizes="56px"
-                  className="object-cover object-top"
-                />
-              </div>
-              <div>
-                <div className="font-display text-xl leading-tight">Milana Kollmann</div>
-                <div className="eyebrow !text-[10px] !text-white/70 mt-1">
-                  Zahnärztliche Abrechnung
-                </div>
+            <div className="mt-14 rounded-md glass-deep px-5 py-4 w-fit">
+              <div className="font-display text-xl leading-tight">Milana Kollmann</div>
+              <div className="eyebrow !text-[10px] !text-white/70 mt-1">
+                Zahnärztliche Abrechnung
               </div>
             </div>
           </Reveal>
