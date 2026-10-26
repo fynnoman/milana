@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -10,16 +8,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1500px] px-6 sm:px-10 pt-20 pb-10">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <div className="relative w-[120px] aspect-square overflow-hidden rounded-full ring-1 ring-line bg-white">
-              <Image
-                src="/logo.webp"
-                alt="Milana Kollmann · Zahnärztliche Abrechnung"
-                fill
-                sizes="120px"
-                className="object-cover select-none"
-              />
-            </div>
-            <p className="mt-6 text-[13px] leading-[1.75] text-navy/70 max-w-[260px]">
+            <p className="text-[13px] leading-[1.75] text-navy/70 max-w-[260px]">
               Persönliche Unterstützung für Zahnarztpraxen aus Saarlouis.
               Persönlich, präzise, zuverlässig.
             </p>
