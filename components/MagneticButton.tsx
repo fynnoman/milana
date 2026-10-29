@@ -11,6 +11,8 @@ type Props = {
   className?: string;
   strength?: number;
   type?: "button" | "submit" | "reset";
+  target?: string;
+  rel?: string;
 };
 
 export default function MagneticButton({
@@ -21,6 +23,8 @@ export default function MagneticButton({
   className,
   strength = 24,
   type = "button",
+  target,
+  rel,
 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const shouldReduce = useReducedMotion();
@@ -72,7 +76,7 @@ export default function MagneticButton({
       className="inline-block"
     >
       {href ? (
-        <a href={href}>{content}</a>
+        <a href={href} target={target} rel={rel}>{content}</a>
       ) : (
         <button type={type} onClick={onClick}>
           {content}

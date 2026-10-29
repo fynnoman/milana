@@ -6,6 +6,7 @@ import HorizontalServices from "@/components/HorizontalServices";
 import ScaleReveal from "@/components/ScaleReveal";
 import About from "@/components/About";
 import Process from "@/components/Process";
+import AnyDesk from "@/components/AnyDesk";
 import Numbers from "@/components/Numbers";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -23,6 +24,7 @@ export default function Page() {
       <ScaleReveal />
       <About />
       <Process />
+      <AnyDesk />
       <Numbers />
       <Testimonials />
       <FAQ />

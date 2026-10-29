@@ -122,7 +122,7 @@ export default function About() {
               <p className="text-[16px] leading-[1.85] text-navy/80">
                 Mein Weg führte über die zahnmedizinische Praxis in die
                 Abrechnung. Heute unterstütze ich Praxen von Saarlouis aus
-                als externe ZMV. Digital, remote in Ihrer Praxissoftware und
+                als externe Abrechnungsmanagerin. Digital, remote in Ihrer Praxissoftware und
                 immer als feste Ansprechpartnerin, die Ihre Praxis kennt.
               </p>
               <p className="mt-6 text-[15px] leading-[1.85] text-navy/70">

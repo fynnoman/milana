@@ -12,8 +12,8 @@ const faqs = [
     a: "Nach dem Kennenlernen bekommen Sie ein Angebot mit klarem Umfang und festem Startdatum. Sobald wir uns einig sind, richte ich einen abrechnungsseitigen Zugang zu Ihrer Praxissoftware ein. Sie behalten die Hoheit über Ihre Praxis. Ich arbeite im Hintergrund und rechne je nach Wunsch monatlich oder quartalsweise ab, mit einem kurzen Statusbild dazu.",
   },
   {
-    q: "Arbeiten Sie remote als externe ZMV?",
-    a: "Ja. Ich übernehme die Abrechnung komplett remote in Ihrer Praxissoftware. Sie geben Arbeit ab und behalten die Kontrolle. Zahnarztpraxis-Inhaber und ZMV-Teams, die Entlastung brauchen, bekommen eine feste Ansprechpartnerin ohne zusätzlichen Arbeitsplatz vor Ort.",
+    q: "Arbeiten Sie remote als externe Abrechnungsmanagerin?",
+    a: "Ja. Ich übernehme die Abrechnung komplett remote in Ihrer Praxissoftware. Sie geben Arbeit ab und behalten die Kontrolle. Zahnarztpraxis-Inhaber und Abrechnungsteams, die Entlastung brauchen, bekommen eine feste Ansprechpartnerin ohne zusätzlichen Arbeitsplatz vor Ort.",
   },
   {
     q: "Welche Reports bekomme ich?",

@@ -37,9 +37,9 @@ const steps = [
     title: "Laufende Betreuung",
     subtitle: "Führen",
     body:
-      "Je nach Wunsch rechne ich monatlich oder quartalsweise ab, remote und direkt in Ihrer Praxissoftware. Dazu bekommen Sie wöchentliche, leicht verständliche Reports zu Honorar, Rückläufern, offenen HKPs und kritischen GOZ-Ziffern. Sie geben Arbeit ab und behalten die Kontrolle.",
+      "Je nach Wunsch rechne ich monatlich oder quartalsweise ab, remote und direkt in Ihrer Praxissoftware. Der Zugriff läuft sicher über AnyDesk. Dazu bekommen Sie wöchentliche, leicht verständliche Reports zu Honorar, Rückläufern, offenen HKPs und kritischen GOZ-Ziffern. Sie geben Arbeit ab und behalten die Kontrolle.",
     time: "Ab sofort",
-    detail: ["Monatlich oder quartalsweise", "Wöchentliche Reports", "Remote in Ihrer Software"],
+    detail: ["Monatlich oder quartalsweise", "Wöchentliche Reports", "Remote via AnyDesk"],
   },
 ];
 
