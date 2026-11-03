@@ -12,6 +12,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { FaqLd } from "@/components/JsonLd";
 
 export default function Page() {
   return (
@@ -30,6 +31,7 @@ export default function Page() {
       <FAQ />
       <Contact />
       <Footer />
+      <FaqLd />
     </main>
   );
 }

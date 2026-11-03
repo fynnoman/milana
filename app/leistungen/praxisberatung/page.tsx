@@ -10,6 +10,10 @@ export const metadata: Metadata = {
     "Gemeinsamer Blick auf Ihre Abrechnungsabläufe und die Übergaben zwischen Behandlung, Assistenz und Verwaltung. Ohne Beraterjargon, mit konkreten Vorschlägen.",
   alternates: { canonical: "/leistungen/praxisberatung" },
   openGraph: {
+    type: "article",
+    locale: "de_DE",
+    url: "/leistungen/praxisberatung",
+    siteName: "Milana Kollmann · Zahnärztliche Abrechnung",
     title: "Praxisberatung · Milana Kollmann",
     description:
       "Prozesse, Abläufe und Übergaben rund um die zahnärztliche Abrechnung.",

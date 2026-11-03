@@ -69,7 +69,7 @@ export default function Contact() {
           <Reveal className="lg:col-span-6">
             <div className="space-y-10">
               <ContactRow label="Telefon" value="+49 174 2122526" href="tel:+491742122526" />
-              <ContactRow label="Standort" value="Saarland" />
+              <ContactRow label="Standort" value="Nalbach, Saarland · Deutschlandweit digital" />
               <ContactRow label="Anfragen" value="Am liebsten kurz anrufen. Ich melde mich zurück, wenn ich gerade nicht drangehen kann." />
             </div>
 

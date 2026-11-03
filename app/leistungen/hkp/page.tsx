@@ -10,6 +10,10 @@ export const metadata: Metadata = {
     "Prüfung, Erstellung und Überarbeitung von Heil- und Kostenplänen für ZE, PAR, KFO und KBR. Mit Alternativplänen und verständlicher Patientenerklärung.",
   alternates: { canonical: "/leistungen/hkp" },
   openGraph: {
+    type: "article",
+    locale: "de_DE",
+    url: "/leistungen/hkp",
+    siteName: "Milana Kollmann · Zahnärztliche Abrechnung",
     title: "HKP-Erstellung · Milana Kollmann",
     description:
       "Heil- und Kostenpläne für ZE, PAR, KFO, KBR. Alternativpläne und klare Patientenkommunikation.",

@@ -10,6 +10,10 @@ export const metadata: Metadata = {
     "Externe Privatabrechnung für Zahnarztpraxen. GOZ inklusive §2-Begründungen, Analog- und Verlangensleistungen, Fremd- und Eigenlabor nach BEB und BEL II. Persönlich, präzise, zuverlässig.",
   alternates: { canonical: "/leistungen/privatabrechnung" },
   openGraph: {
+    type: "article",
+    locale: "de_DE",
+    url: "/leistungen/privatabrechnung",
+    siteName: "Milana Kollmann · Zahnärztliche Abrechnung",
     title: "Privatabrechnung · Milana Kollmann",
     description:
       "Externe Privatabrechnung nach GOZ für Zahnarztpraxen in Deutschland.",

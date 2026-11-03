@@ -10,6 +10,10 @@ export const metadata: Metadata = {
     "Quartalsweise BEMA-Abrechnung für Vertragszahnarztpraxen. PAR, ZE, KBR, Gutachten-Dossiers und Begleitung im Widerspruchsverfahren.",
   alternates: { canonical: "/leistungen/kzv-abrechnung" },
   openGraph: {
+    type: "article",
+    locale: "de_DE",
+    url: "/leistungen/kzv-abrechnung",
+    siteName: "Milana Kollmann · Zahnärztliche Abrechnung",
     title: "KZV-Abrechnung · Milana Kollmann",
     description:
       "BEMA-Quartalsabschluss, PAR, ZE, KBR und Gutachten für Vertragszahnarztpraxen.",

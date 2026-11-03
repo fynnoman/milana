@@ -1,7 +1,13 @@
 "use client";
 
+import { usePathname } from "next/navigation";
+import { SITE, SERVICES } from "@/lib/site";
+
 export default function Footer() {
   const year = new Date().getFullYear();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const anchorHref = (a: string) => (isHome ? `#${a}` : `/#${a}`);
 
   return (
     <footer className="relative bg-white text-navy border-t border-line">
@@ -17,35 +23,40 @@ export default function Footer() {
           <div>
             <div className="eyebrow">Leistungen</div>
             <ul className="mt-5 space-y-2.5 text-[14px] text-navy/80">
-              <li><a href="#leistungen" className="hover:text-petrol transition-colors">Privatabrechnung</a></li>
-              <li><a href="#leistungen" className="hover:text-petrol transition-colors">KZV-Abrechnung</a></li>
-              <li><a href="#leistungen" className="hover:text-petrol transition-colors">HKP-Erstellung</a></li>
-              <li><a href="#leistungen" className="hover:text-petrol transition-colors">Reklamationen</a></li>
-              <li><a href="#leistungen" className="hover:text-petrol transition-colors">Praxisberatung</a></li>
+              {SERVICES.map((s) => (
+                <li key={s.slug}>
+                  <a
+                    href={`/leistungen/${s.slug}`}
+                    className="hover:text-petrol transition-colors"
+                  >
+                    {s.title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
             <div className="eyebrow">Kennenlernen</div>
             <ul className="mt-5 space-y-2.5 text-[14px] text-navy/80">
-              <li><a href="#ueber" className="hover:text-petrol transition-colors">Über mich</a></li>
-              <li><a href="#ablauf" className="hover:text-petrol transition-colors">Ablauf</a></li>
-              <li><a href="#faq" className="hover:text-petrol transition-colors">Häufige Fragen</a></li>
-              <li><a href="#kontakt" className="hover:text-petrol transition-colors">Kontakt</a></li>
+              <li><a href={anchorHref("ueber")} className="hover:text-petrol transition-colors">Über mich</a></li>
+              <li><a href={anchorHref("ablauf")} className="hover:text-petrol transition-colors">Ablauf</a></li>
+              <li><a href={anchorHref("faq")} className="hover:text-petrol transition-colors">Häufige Fragen</a></li>
+              <li><a href={anchorHref("kontakt")} className="hover:text-petrol transition-colors">Kontakt</a></li>
             </ul>
           </div>
 
           <div>
             <div className="eyebrow">Kontakt</div>
             <ul className="mt-5 space-y-2.5 text-[14px] text-navy/80">
-              <li className="text-navy/90 font-medium">Milana Kollmann</li>
+              <li className="text-navy/90 font-medium">{SITE.owner.name}</li>
               <li>
-                <a href="tel:+491742122526" className="hover:text-petrol transition-colors">
-                  +49 174 2122526
+                <a href={SITE.contact.phoneHref} className="hover:text-petrol transition-colors">
+                  {SITE.contact.phone}
                 </a>
               </li>
               <li className="text-navy/60 text-[13px] mt-3">
-                Saarland · Deutschlandweit digital
+                {SITE.address.addressLocality} · {SITE.areaServed.local} · Deutschlandweit digital
               </li>
             </ul>
           </div>
@@ -53,7 +64,7 @@ export default function Footer() {
 
         <div className="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-line pt-6">
           <div className="text-[11px] tracking-[0.14em] uppercase text-navy/50">
-            © {year} Milana Kollmann · Zahnärztliche Abrechnung
+            © {year} {SITE.legalName}
           </div>
           <div className="flex flex-wrap items-center gap-6 text-[12px] text-navy/60">
             <a href="/impressum" className="hover:text-petrol transition-colors">Impressum</a>

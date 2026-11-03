@@ -10,6 +10,10 @@ export const metadata: Metadata = {
     "Bei Rechnungskürzungen durch Beihilfe oder PKV: Nachbegründung im Namen der Praxis, fachlich fundiert, mit Blick auf eine gute Lösung. Widerspruch bis zur Klärung.",
   alternates: { canonical: "/leistungen/reklamationsmanagement" },
   openGraph: {
+    type: "article",
+    locale: "de_DE",
+    url: "/leistungen/reklamationsmanagement",
+    siteName: "Milana Kollmann · Zahnärztliche Abrechnung",
     title: "Reklamationsmanagement · Milana Kollmann",
     description:
       "Nachbegründungen und Widerspruch bei Rechnungskürzungen durch Beihilfe und PKV.",

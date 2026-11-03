@@ -1,6 +1,6 @@
 import { SITE, SERVICES } from "@/lib/site";
 
-const FAQS = [
+export const FAQS = [
   {
     q: "Wie läuft die Zusammenarbeit ab?",
     a: "Nach dem Kennenlernen bekommen Sie ein Angebot mit klarem Umfang und festem Startdatum. Sobald wir uns einig sind, richte ich einen abrechnungsseitigen Zugang zu Ihrer Praxissoftware ein. Sie behalten die Hoheit über Ihre Praxis. Ich arbeite im Hintergrund und rechne je nach Wunsch monatlich oder quartalsweise ab, mit einem kurzen Statusbild dazu.",
@@ -43,11 +43,15 @@ const FAQS = [
   },
 ];
 
-export default function JsonLd() {
-  const orgId = `${SITE.url}#organization`;
-  const personId = `${SITE.url}#milana-kollmann`;
-  const websiteId = `${SITE.url}#website`;
+const orgId = `${SITE.url}#organization`;
+const personId = `${SITE.url}#milana-kollmann`;
+const websiteId = `${SITE.url}#website`;
 
+function serviceNodeId(slug: string) {
+  return `${SITE.url}/leistungen/${slug}#service`;
+}
+
+export default function JsonLd() {
   const graph: Record<string, unknown>[] = [
     {
       "@type": "ProfessionalService",
@@ -59,7 +63,6 @@ export default function JsonLd() {
       logo: `${SITE.url}/logo.webp`,
       image: `${SITE.url}/logo.webp`,
       telephone: SITE.contact.phone,
-      priceRange: "€€",
       founder: { "@id": personId },
       employee: { "@id": personId },
       address: {
@@ -87,19 +90,15 @@ export default function JsonLd() {
         "Praxisberatung",
         ...SITE.softwares,
       ],
-      makesOffer: SERVICES.map((s) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          "@id": `${SITE.url}/leistungen/${s.slug}#service`,
-          name: s.title,
-          serviceType: s.title,
-          description: s.intro,
-          provider: { "@id": orgId },
-          areaServed: SITE.areaServed.primary,
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Leistungen",
+        itemListElement: SERVICES.map((s) => ({
+          "@type": "Offer",
+          itemOffered: { "@id": serviceNodeId(s.slug) },
           url: `${SITE.url}/leistungen/${s.slug}`,
-        },
-      })),
+        })),
+      },
     },
     {
       "@type": "Person",
@@ -121,26 +120,69 @@ export default function JsonLd() {
       "@id": websiteId,
       url: SITE.url,
       name: SITE.brand,
+      alternateName: SITE.legalName,
       inLanguage: "de-DE",
       publisher: { "@id": orgId },
     },
-    {
-      "@type": "FAQPage",
-      "@id": `${SITE.url}#faq`,
-      mainEntity: FAQS.map((f) => ({
-        "@type": "Question",
-        name: f.q,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: f.a,
-        },
-      })),
-    },
+    ...SERVICES.map((s) => ({
+      "@type": "Service",
+      "@id": serviceNodeId(s.slug),
+      name: s.title,
+      serviceType: s.title,
+      description: s.intro,
+      provider: { "@id": orgId },
+      areaServed: [
+        { "@type": "Country", name: SITE.areaServed.primary },
+        { "@type": "AdministrativeArea", name: SITE.areaServed.local },
+      ],
+      inLanguage: "de-DE",
+      url: `${SITE.url}/leistungen/${s.slug}`,
+    })),
   ];
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": graph,
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
+export function FaqLd() {
+  const homeWebPageId = `${SITE.url}#webpage`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": homeWebPageId,
+        url: SITE.url,
+        name: SITE.legalName,
+        inLanguage: "de-DE",
+        isPartOf: { "@id": websiteId },
+        about: { "@id": orgId },
+        primaryImageOfPage: `${SITE.url}/images/milana-portrait.webp`,
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${SITE.url}#faq`,
+        inLanguage: "de-DE",
+        isPartOf: { "@id": homeWebPageId },
+        mainEntity: FAQS.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: f.a,
+          },
+        })),
+      },
+    ],
   };
 
   return (

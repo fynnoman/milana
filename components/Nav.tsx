@@ -4,19 +4,24 @@ import Link from "next/link";
 import Image from "next/image";
 import { m, useMotionValueEvent, useScroll } from "framer-motion";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 
 const items = [
-  { href: "#leistungen", label: "Leistungen" },
-  { href: "#ueber", label: "Über mich" },
-  { href: "#ablauf", label: "Ablauf" },
-  { href: "#faq", label: "FAQ" },
+  { anchor: "leistungen", label: "Leistungen" },
+  { anchor: "ueber", label: "Über mich" },
+  { anchor: "ablauf", label: "Ablauf" },
+  { anchor: "faq", label: "FAQ" },
 ];
 
 export default function Nav() {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  const anchorHref = (a: string) => (isHome ? `#${a}` : `/#${a}`);
+  const logoHref = isHome ? "#top" : "/";
 
   useMotionValueEvent(scrollY, "change", (v) => {
     setScrolled(v > 24);
@@ -36,7 +41,7 @@ export default function Nav() {
           }`}
         >
           <div className="flex items-center justify-between">
-            <Link href="#top" className="flex items-center group">
+            <Link href={logoHref} className="flex items-center group">
               <Image
                 src="/wordmark.webp"
                 alt="MB Zahnabrechnung"
@@ -51,8 +56,8 @@ export default function Nav() {
             <nav className="hidden md:flex items-center gap-8">
               {items.map((it) => (
                 <a
-                  key={it.href}
-                  href={it.href}
+                  key={it.anchor}
+                  href={anchorHref(it.anchor)}
                   className="text-[12px] uppercase tracking-[0.16em] text-navy/80 hover:text-navy transition-colors relative group"
                 >
                   {it.label}
@@ -63,7 +68,7 @@ export default function Nav() {
 
             <div className="flex items-center gap-2">
               <a
-                href="#kontakt"
+                href={anchorHref("kontakt")}
                 className="hidden sm:inline-flex items-center gap-2 rounded-full bg-navy px-4 py-2 text-[11px] uppercase tracking-[0.16em] text-white hover:bg-deep transition-colors"
               >
                 Kennenlernen
@@ -99,8 +104,8 @@ export default function Nav() {
             <div className="flex flex-col gap-4 pt-4 pb-2">
               {items.map((it) => (
                 <a
-                  key={it.href}
-                  href={it.href}
+                  key={it.anchor}
+                  href={anchorHref(it.anchor)}
                   onClick={() => setOpen(false)}
                   className="text-navy/85 text-sm uppercase tracking-[0.14em]"
                 >
@@ -108,7 +113,7 @@ export default function Nav() {
                 </a>
               ))}
               <a
-                href="#kontakt"
+                href={anchorHref("kontakt")}
                 onClick={() => setOpen(false)}
                 className="self-start mt-2 rounded-full bg-navy px-5 py-2.5 text-[11px] uppercase tracking-[0.16em] text-white"
               >

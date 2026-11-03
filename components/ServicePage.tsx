@@ -87,11 +87,22 @@ export default function ServicePage({ service }: Props) {
               Abgerechnet wird je nach Ihrem Wunsch monatlich oder
               quartalsweise, mit einem kurzen Monats- oder Quartalsbild dazu.
             </p>
-            <p>
-              Für diese Leistung nutze ich die gängigen Praxissoftwares,
-              darunter {SITE.softwares.slice(0, -1).join(", ")} und{" "}
-              {SITE.softwares.slice(-1)}. Neue Systeme lerne ich zügig ein.
-            </p>
+            <div>
+              <p>Für diese Leistung nutze ich die gängigen Praxissoftwares:</p>
+              <ul className="mt-3 flex flex-wrap gap-2">
+                {SITE.softwares.map((s) => (
+                  <li
+                    key={s}
+                    className="rounded-full border border-petrol/30 bg-white/70 px-3 py-1 text-[12px] tracking-[0.08em] uppercase text-navy/80"
+                  >
+                    {s}
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-3 text-[13px] text-navy/60">
+                Neue Systeme lerne ich zügig ein.
+              </p>
+            </div>
             <p>
               Zugänge werden ausschließlich verschlüsselt übergeben. Vor dem
               ersten Vorgang unterzeichnen wir eine Vereinbarung zur
@@ -167,26 +178,22 @@ export default function ServicePage({ service }: Props) {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "Service",
-                "@id": `${SITE.url}/leistungen/${service.slug}#service`,
-                name: service.title,
-                serviceType: service.title,
-                description: service.intro,
-                provider: { "@id": `${SITE.url}#organization` },
-                areaServed: [
-                  { "@type": "Country", name: SITE.areaServed.primary },
-                  { "@type": "AdministrativeArea", name: SITE.areaServed.local },
-                ],
+                "@type": "WebPage",
+                "@id": `${SITE.url}/leistungen/${service.slug}#webpage`,
                 url: `${SITE.url}/leistungen/${service.slug}`,
-                offers: {
-                  "@type": "Offer",
-                  priceCurrency: "EUR",
-                  availability: "https://schema.org/InStock",
-                  url: `${SITE.url}/leistungen/${service.slug}`,
+                name: service.title,
+                description: service.intro,
+                inLanguage: "de-DE",
+                isPartOf: { "@id": `${SITE.url}#website` },
+                about: { "@id": `${SITE.url}/leistungen/${service.slug}#service` },
+                primaryImageOfPage: `${SITE.url}/images/milana-portrait.webp`,
+                breadcrumb: {
+                  "@id": `${SITE.url}/leistungen/${service.slug}#breadcrumb`,
                 },
               },
               {
                 "@type": "BreadcrumbList",
+                "@id": `${SITE.url}/leistungen/${service.slug}#breadcrumb`,
                 itemListElement: [
                   {
                     "@type": "ListItem",
