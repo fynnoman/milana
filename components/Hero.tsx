@@ -33,10 +33,14 @@ export default function Hero() {
     >
       {/* Vollflächiges Bild rechts */}
       <m.div
-        style={{ y: photoY, willChange: "transform, clip-path" }}
+        style={{
+          y: photoY,
+          willChange: "transform, clip-path",
+          contain: "paint",
+        }}
         initial={{ clipPath: "inset(100% 0 0 0)" }}
         animate={{ clipPath: "inset(0% 0 0 0)" }}
-        transition={{ duration: 1.6, ease: [0.77, 0, 0.175, 1], delay: 0.15 }}
+        transition={{ duration: 1.0, ease: [0.77, 0, 0.175, 1], delay: 0.2 }}
         className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[58%] overflow-hidden gpu"
       >
         <m.div
