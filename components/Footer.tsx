@@ -55,6 +55,7 @@ export default function Footer() {
                   {SITE.contact.phone}
                 </a>
               </li>
+              <li><a href={SITE.contact.emailHref} className="hover:text-petrol transition-colors break-all">{SITE.contact.email}</a></li>
               <li className="text-navy/60 text-[13px] mt-3">
                 {SITE.address.addressLocality} · {SITE.areaServed.local} · Deutschlandweit digital
               </li>
