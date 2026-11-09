@@ -43,6 +43,7 @@ export default function ImpressumPage() {
                   {SITE.contact.phone}
                 </a>
               </p>
+              <p>E-Mail: <a className="text-petrol hover:text-navy transition-colors" href={SITE.contact.emailHref}>{SITE.contact.email}</a></p>
             </div>
 
             <div>
