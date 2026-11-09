@@ -1,6 +1,7 @@
 "use client";
 
 import Reveal from "./Reveal";
+import { SITE } from "@/lib/site";
 import SplitText from "./SplitText";
 import MagneticButton from "./MagneticButton";
 import { m, useReducedMotion, useScroll, useTransform } from "framer-motion";
@@ -68,6 +69,7 @@ export default function Contact() {
         <div className="mt-24 grid gap-16 lg:grid-cols-12">
           <Reveal className="lg:col-span-6">
             <div className="space-y-10">
+              <ContactRow label="E-Mail" value={SITE.contact.email} href={SITE.contact.emailHref} />
               <ContactRow label="Telefon" value="+49 174 2122526" href="tel:+491742122526" />
               <ContactRow label="Standort" value="Nalbach, Saarland · Deutschlandweit digital" />
               <ContactRow label="Anfragen" value="Am liebsten kurz anrufen. Ich melde mich zurück, wenn ich gerade nicht drangehen kann." />
