@@ -37,6 +37,7 @@ export default function DatenschutzPage() {
                   {SITE.contact.phone}
                 </a>
               </p>
+              <p>E-Mail: <a className="text-petrol hover:text-navy transition-colors" href={SITE.contact.emailHref}>{SITE.contact.email}</a></p>
             </div>
             <p>
               Diese Website verarbeitet derzeit keine personenbezogenen Daten
