@@ -63,6 +63,7 @@ export default function JsonLd() {
       logo: `${SITE.url}/logo.webp`,
       image: `${SITE.url}/logo.webp`,
       telephone: SITE.contact.phone,
+      email: SITE.contact.email,
       founder: { "@id": personId },
       employee: { "@id": personId },
       address: {
@@ -106,6 +107,7 @@ export default function JsonLd() {
       name: SITE.owner.name,
       jobTitle: SITE.owner.jobTitle,
       telephone: SITE.contact.phone,
+      email: SITE.contact.email,
       worksFor: { "@id": orgId },
       image: `${SITE.url}/images/milana-portrait.webp`,
       address: {
