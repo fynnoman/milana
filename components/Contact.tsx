@@ -58,8 +58,8 @@ export default function Contact() {
             </div>
             <div className="max-w-xs text-white/80">
               <p className="text-[14px] leading-[1.75]">
-                Ein kurzes, unverbindliches Telefonat. Wir schauen gemeinsam,
-                ob und wie ich Sie sinnvoll unterstützen kann. Kein
+                Eine kurze, unverbindliche Nachricht per E-Mail. Wir schauen
+                gemeinsam, ob und wie ich Sie sinnvoll unterstützen kann. Kein
                 Verkaufsgespräch, versprochen.
               </p>
             </div>
@@ -70,9 +70,7 @@ export default function Contact() {
           <Reveal className="lg:col-span-6">
             <div className="space-y-10">
               <ContactRow label="E-Mail" value={SITE.contact.email} href={SITE.contact.emailHref} />
-              <ContactRow label="Telefon" value="+49 174 2122526" href="tel:+491742122526" />
-              <ContactRow label="Standort" value="Nalbach, Saarland · Deutschlandweit digital" />
-              <ContactRow label="Anfragen" value="Am liebsten kurz anrufen. Ich melde mich zurück, wenn ich gerade nicht drangehen kann." />
+              <ContactRow label="Anfragen" value="Schreiben Sie mir kurz per E-Mail. Ich melde mich zeitnah zurück." />
             </div>
 
             <div className="mt-14 rounded-md glass-deep px-5 py-4 w-fit">
@@ -88,21 +86,21 @@ export default function Contact() {
               <div>
                 <div className="eyebrow !text-white/70">Kurz gesagt</div>
                 <p className="font-display italic mt-6 text-[clamp(24px,2.6vw,34px)] leading-[1.2] text-white">
-                  „Rufen Sie an, wir schauen gemeinsam,
+                  „Schreiben Sie mir, wir schauen gemeinsam,
                   <br />
                   ob wir zusammenpassen."
                 </p>
                 <div className="hairline my-8 !bg-white/25 max-w-[80px]" />
                 <p className="text-[14px] leading-[1.75] text-white/80 max-w-md">
                   Ich freue mich, wenn Sie sich melden. Am unkompliziertesten
-                  ist ein Anruf. So bekomme ich einen ersten Eindruck von
-                  Ihrer Praxis und Sie einen von mir.
+                  ist eine kurze E-Mail mit zwei, drei Sätzen zu Ihrer Praxis.
+                  Ich antworte zeitnah.
                 </p>
               </div>
 
               <div className="mt-12 flex flex-wrap items-center gap-4">
-                <MagneticButton href="tel:+491742122526" variant="primary">
-                  Jetzt anrufen <span className="arrow">→</span>
+                <MagneticButton href={SITE.contact.emailHref} variant="primary">
+                  E-Mail schreiben <span className="arrow">→</span>
                 </MagneticButton>
               </div>
 

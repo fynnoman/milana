@@ -50,14 +50,9 @@ export default function Footer() {
             <div className="eyebrow">Kontakt</div>
             <ul className="mt-5 space-y-2.5 text-[14px] text-navy/80">
               <li className="text-navy/90 font-medium">{SITE.owner.name}</li>
-              <li>
-                <a href={SITE.contact.phoneHref} className="hover:text-petrol transition-colors">
-                  {SITE.contact.phone}
-                </a>
-              </li>
               <li><a href={SITE.contact.emailHref} className="hover:text-petrol transition-colors break-all">{SITE.contact.email}</a></li>
               <li className="text-navy/60 text-[13px] mt-3">
-                {SITE.address.addressLocality} · {SITE.areaServed.local} · Deutschlandweit digital
+                Deutschlandweit digital
               </li>
             </ul>
           </div>

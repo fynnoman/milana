@@ -10,8 +10,6 @@ export const SITE = {
     jobTitle: "Zahnärztliche Abrechnung",
   },
   contact: {
-    phone: "+49 174 2122526",
-    phoneHref: "tel:+491742122526",
     email: "info@mb-zahnabrechnung.de",
     emailHref: "mailto:info@mb-zahnabrechnung.de",
   },

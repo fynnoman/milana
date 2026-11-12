@@ -58,8 +58,8 @@ export default function ServicePage({ service }: Props) {
           </ul>
 
           <div className="mt-14 flex flex-wrap gap-4">
-            <MagneticButton href="tel:+491742122526" variant="primary">
-              Jetzt anrufen <span className="arrow">→</span>
+            <MagneticButton href={SITE.contact.emailHref} variant="primary">
+              E-Mail schreiben <span className="arrow">→</span>
             </MagneticButton>
           </div>
         </div>
@@ -152,8 +152,8 @@ export default function ServicePage({ service }: Props) {
               Nächster Schritt
             </div>
             <h2 className="font-display mt-5 text-[clamp(32px,5vw,72px)] leading-[1] max-w-2xl tracking-[-0.01em]">
-              Rufen Sie an.
-              <span className="italic text-white/80 block"> Oder schreiben Sie kurz.</span>
+              Schreiben Sie mir.
+              <span className="italic text-white/80 block"> Ein ruhiger Austausch per E-Mail.</span>
             </h2>
             <p className="mt-6 max-w-md text-white/80 text-[15px] leading-[1.75]">
               Ein ruhiges Erstgespräch, kein Verkaufsgespräch. Wir schauen
@@ -162,8 +162,8 @@ export default function ServicePage({ service }: Props) {
             </p>
           </div>
           <div className="flex flex-wrap gap-4">
-            <MagneticButton href="tel:+491742122526" variant="primary">
-              Jetzt anrufen <span className="arrow">→</span>
+            <MagneticButton href={SITE.contact.emailHref} variant="primary">
+              E-Mail schreiben <span className="arrow">→</span>
             </MagneticButton>
           </div>
         </div>

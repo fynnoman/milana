@@ -37,12 +37,6 @@ export default function ImpressumPage() {
 
             <div>
               <div className="eyebrow !text-navy/60 mb-3">Kontakt</div>
-              <p>
-                Telefon:{" "}
-                <a className="text-petrol hover:text-navy transition-colors" href={SITE.contact.phoneHref}>
-                  {SITE.contact.phone}
-                </a>
-              </p>
               <p>E-Mail: <a className="text-petrol hover:text-navy transition-colors" href={SITE.contact.emailHref}>{SITE.contact.email}</a></p>
             </div>
 

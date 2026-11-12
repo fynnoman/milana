@@ -31,18 +31,11 @@ export default function DatenschutzPage() {
               <p>
                 {SITE.address.postalCode} {SITE.address.addressLocality}
               </p>
-              <p>
-                Telefon:{" "}
-                <a className="text-petrol hover:text-navy transition-colors" href={SITE.contact.phoneHref}>
-                  {SITE.contact.phone}
-                </a>
-              </p>
               <p>E-Mail: <a className="text-petrol hover:text-navy transition-colors" href={SITE.contact.emailHref}>{SITE.contact.email}</a></p>
             </div>
             <p>
               Diese Website verarbeitet derzeit keine personenbezogenen Daten
-              über Formulare. Für Terminanfragen nutzen Sie bitte den
-              telefonischen Weg.
+              über Formulare. Für Anfragen nutzen Sie bitte den E-Mail-Weg.
             </p>
             <p>
               Beim Aufruf der Website werden technisch notwendige Daten
