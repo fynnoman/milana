@@ -42,20 +42,17 @@ export default function SplitText({
             {chars.map((ch, i) => {
               const idx = charIndex++;
               const initial = {
-                y: shouldReduce ? 0 : "110%",
-                opacity: shouldReduce ? 1 : 0,
-                rotate: shouldReduce ? 0 : 3,
+                y: shouldReduce ? "0%" : "110%",
               };
-              const to = { y: 0, opacity: 1, rotate: 0 };
+              const to = { y: "0%" };
               const transition = {
-                duration: 0.9,
+                duration: 0.75,
                 ease: [0.23, 1, 0.32, 1] as [number, number, number, number],
                 delay: delay + wIdx * wordDelay + i * stagger,
               };
               const style = {
                 transformOrigin: "50% 100%",
-                willChange: done ? "auto" : "transform, opacity",
-                transform: "translate3d(0,0,0)",
+                willChange: done ? "auto" : "transform",
               } as const;
               const isLast = idx === totalChars - 1;
               const onComplete = isLast ? () => setDone(true) : undefined;

@@ -22,7 +22,7 @@ export default function Hero() {
   });
 
   const photoY = useTransform(scrollYProgress, [0, 1], ["0%", shouldReduce ? "0%" : "12%"]);
-  const photoScale = useTransform(scrollYProgress, [0, 1], [1.02, shouldReduce ? 1.02 : 1.12]);
+  const photoScale = useTransform(scrollYProgress, [0, 1], [1, shouldReduce ? 1 : 1.1]);
   const contentY = useTransform(scrollYProgress, [0, 1], ["0%", shouldReduce ? "0%" : "-14%"]);
 
   return (
@@ -40,7 +40,7 @@ export default function Hero() {
         }}
         initial={{ clipPath: "inset(100% 0 0 0)" }}
         animate={{ clipPath: "inset(0% 0 0 0)" }}
-        transition={{ duration: 1.0, ease: [0.77, 0, 0.175, 1], delay: 0.2 }}
+        transition={{ duration: 0.85, ease: [0.77, 0, 0.175, 1], delay: 0.15 }}
         className="pointer-events-none absolute inset-y-0 right-0 w-full lg:w-[58%] overflow-hidden gpu"
       >
         <m.div
